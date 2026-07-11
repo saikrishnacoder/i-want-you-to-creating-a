@@ -2,6 +2,70 @@ const qs = (selector, root = document) => root.querySelector(selector);
 const qsa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 const has = (selector) => Boolean(qs(selector));
 
+(function() {
+  var GITHUB_MEDIA_BASE = "https://media.githubusercontent.com/media/saikrishnacoder/i-want-you-to-creating-a/main/";
+
+  function isLocalAsset(src) {
+    return src && !/^(?:[a-z][a-z0-9+.-]*:|#|\/\/)/i.test(src);
+  }
+
+  function repoPathFrom(src) {
+    var clean = src.split("#")[0].split("?")[0];
+    var pageDir = window.location.pathname.replace(/\/[^\/]*$/, "/");
+    var path = new URL(clean, window.location.origin + pageDir).pathname;
+    path = path.replace(/^\/+/, "");
+    return path.split("/").filter(Boolean).map(function(part) {
+      return encodeURIComponent(decodeURIComponent(part));
+    }).join("/");
+  }
+
+  function fallbackUrl(src) {
+    return GITHUB_MEDIA_BASE + repoPathFrom(src);
+  }
+
+  function retryMedia(el) {
+    var attr = el.tagName === "SOURCE" ? "src" : (el.hasAttribute("poster") && !el.hasAttribute("src") ? "poster" : "src");
+    var original = el.getAttribute(attr);
+    if (!isLocalAsset(original) || el.dataset.githubMediaFallback === "1") return;
+    el.dataset.githubMediaFallback = "1";
+    el.setAttribute(attr, fallbackUrl(original));
+    if (el.tagName === "SOURCE" && el.parentElement && typeof el.parentElement.load === "function") {
+      el.parentElement.load();
+    } else if (el.tagName === "VIDEO" && typeof el.load === "function") {
+      el.load();
+    }
+  }
+
+  function attach(el) {
+    if (!el || el.dataset.assetFallbackReady === "1") return;
+    el.dataset.assetFallbackReady = "1";
+    el.addEventListener("error", function() { retryMedia(el); });
+    if (el.tagName === "IMG" && el.complete && el.naturalWidth === 0) retryMedia(el);
+  }
+
+  function scan(root) {
+    qsa("img, video, source", root || document).forEach(attach);
+  }
+
+  document.addEventListener("error", function(event) {
+    var el = event.target;
+    if (el && /^(IMG|VIDEO|SOURCE)$/.test(el.tagName)) retryMedia(el);
+  }, true);
+
+  document.addEventListener("DOMContentLoaded", function() {
+    scan(document);
+    new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.nodeType !== 1) return;
+          if (/^(IMG|VIDEO|SOURCE)$/.test(node.tagName)) attach(node);
+          scan(node);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  });
+})();
+
 let activeProgramFilter = "all";
 let allServices = [];
 let activeCoachFilter = "all";
