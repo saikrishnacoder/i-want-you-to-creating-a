@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events | Fitness Gurukul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="header-left">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+        <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="coaches.html">Coaches</a>
+      <a href="events.html">Events</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+        <a class="header-play-btn" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+      <span>Get the App</span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+      <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="coaches.html">Coaches</a>
+  <a href="events.html">Events</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="tools.html">Tools</a>
+</nav>
+
+<main>
+  <section class="mg-hero">
+    <div class="mg-hero-bg"><img src="https://images.unsplash.com/photo-1530137073520-98bd6b37f09e?w=1800&q=85" alt="" /></div>
+    <div class="mg-hero-overlay"></div>
+    <div class="mg-hero-content">
+      <span class="mg-hero-badge">Since 2013</span>
+      <h1>Moments That<br>Move Hyderabad</h1>
+      <p>Rides, runs, obstacle courses, and wellness experiences built for every kind of mover.</p>
+      <div class="mg-hero-actions">
+        <a class="primary-button" href="#events">Explore Events</a>
+        <a class="ghost-button" href="contact.html">Plan Yours</a>
+      </div>
+      <div class="mg-hero-stats">
+        <div class="mg-stat"><strong>50+</strong><span>Events</span></div>
+        <div class="mg-stat"><strong>10K+</strong><span>Participants</span></div>
+        <div class="mg-stat"><strong>13</strong><span>Years</span></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="mg-featured">
+    <div class="page-shell">
+    <div class="mg-featured-inner">
+      <div class="mg-featured-text">
+        <span class="mg-feat-urgent">Happening Soon</span>
+        <div class="mg-feat-date-block">
+          <span class="mg-feat-day">19</span>
+          <span class="mg-feat-month">JUL</span>
+        </div>
+        <h2>FG New Ride — Community Cycle</h2>
+        <div class="mg-event-highlights">
+          <div class="mg-event-detail">
+            <span class="mg-event-icon mg-icon-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </span>
+            <div>
+              <strong>Date</strong>
+              <span>19 July 2026, Sunday</span>
+            </div>
+          </div>
+          <div class="mg-event-detail">
+            <span class="mg-event-icon mg-icon-time">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div>
+              <strong>Time</strong>
+              <span>6:00 AM — Ride starts sharp</span>
+            </div>
+          </div>
+          <div class="mg-event-detail">
+            <span class="mg-event-icon mg-icon-loc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <strong>Location</strong>
+              <span>My Home Avatar Cycling Hub, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+        <p>Join Hyderabad's fastest-growing cycling community. Routes for every level — 10K rookie rolls to 100K advanced packs. Safety, support, and great company guaranteed.</p>
+        <div class="mg-tags">
+          <span class="mg-tag-lvl"><strong>5K</strong> Family</span><span class="mg-tag-lvl"><strong>10K</strong> Rookie</span><span class="mg-tag-lvl"><strong>25K</strong> Beginner</span><span class="mg-tag-lvl"><strong>50K</strong> Intermediate</span><span class="mg-tag-lvl"><strong>100K</strong> Advanced</span>
+        </div>
+        <a class="primary-button mg-event-cta" href="https://ifinish.in/cycling/FGCC-July" target="_blank" rel="noopener">Register Now</a>
+      </div>
+      <div class="mg-featured-visual">
+        <img src="new%20%20ind/NW%20RIDE.jpeg" alt="FG New Ride" loading="lazy" />
+        <span class="mg-featured-badge">New</span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="mg-grid-section" id="events">
+    <div class="page-shell">
+    <div class="mg-section-header">
+      <h2>More Events</h2>
+      <p>Summer camps, runs, retreats — find your next challenge.</p>
+    </div>
+    <div class="mg-grid">
+      <article class="mg-card">
+        <div class="mg-card-img"><img src="new%20%20ind/NW%20RIDE.jpeg" alt="FG New Ride" loading="lazy" /></div>
+        <div class="mg-card-body">
+          <span class="mg-card-tag">Cycling · Community</span>
+          <h3>FG New Ride — Community Cycle</h3>
+          <p>Join us for a fresh cycling experience through Hyderabad's best routes. Open to all levels, guided by FG coaches, with support vehicle and refreshments.</p>
+          <div class="mg-card-meta">All Levels · Guided · Support Vehicle</div>
+          <a class="mg-card-cta" href="https://ifinish.in/cycling/FGCC-July" target="_blank" rel="noopener">Register on iFinish</a>
+        </div>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <section class="mg-carousel-section april-ride-section">
+    <div class="page-shell">
+    <div class="mg-section-header">
+      <span class="section-kicker" style="display:block;margin-bottom:6px">April 2026</span>
+      <h2>FG April Ride — Monthly Community Cycle</h2>
+      <p>Our biggest ride yet — 2500+ riders from across Hyderabad rolled together through the city's best routes. Safety, energy, and community on two wheels.</p>
+    </div>
+    <div class="born-stars-info">
+      <div class="born-stars-stat">
+        <strong>2500+</strong>
+        <span>Riders</span>
+      </div>
+      <div class="born-stars-stat">
+        <strong>5</strong>
+        <span>Distance Options</span>
+      </div>
+      <div class="born-stars-stat">
+        <strong>4</strong>
+        <span>Hours</span>
+      </div>
+      <div class="born-stars-stat">
+        <strong>1</strong>
+        <span>Community</span>
+      </div>
+    </div>
+    <div class="born-stars-track" id="aprilRideTrack">
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4681.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4519.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4504.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4590.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4540.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4614.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4565.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4599.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4570.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4666.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4731.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4758.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4607.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4690.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4563.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4770.JPG" alt="April Ride" loading="lazy" /></div>
+      <!-- duplicate for seamless loop -->
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4681.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4519.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4504.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4590.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4540.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4614.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4565.JPG" alt="April Ride" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/APRIL RIDE/DSC_4599.JPG" alt="April Ride" loading="lazy" /></div>
+    </div>
+    </div>
+  </section>
+
+  <section class="mg-carousel-section born-stars-section">
+    <div class="page-shell">
+    <div class="mg-section-header">
+      <span class="section-kicker" style="display:block;margin-bottom:6px">February 2026</span>
+      <h2>Born Stars — Kids Fitness Event</h2>
+      <p>A day dedicated to building strength, confidence, and joy in young athletes. Obstacle courses, team challenges, and non-stop energy.</p>
+    </div>
+    <div class="born-stars-info">
+      <div class="born-stars-stat">
+        <strong>80+</strong>
+        <span>Kids Participated</span>
+      </div>
+      <div class="born-stars-stat">
+        <strong>6</strong>
+        <span>Age Groups</span>
+      </div>
+      <div class="born-stars-stat">
+        <strong>12</strong>
+        <span>Activities</span>
+      </div>
+      <div class="born-stars-stat">
+        <strong>100%</strong>
+        <span>Smiles</span>
+      </div>
+    </div>
+    <div class="born-stars-track" id="bornStarsTrack">
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (18).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (20).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (8).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (17).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (1).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-01-29 at 09.15.20.jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (6).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (19).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-01-29 at 09.15.19 (1).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (4).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (12).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-01-29 at 09.15.22.jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (11).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (5).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11.jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (2).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <!-- duplicate for seamless loop -->
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (18).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (20).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (8).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (17).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (1).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-01-29 at 09.15.20.jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (6).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+      <div class="born-stars-slide"><img src="GALLERY/Born stars/WhatsApp Image 2026-02-03 at 18.24.11 (19).jpeg" alt="Born Stars Event" loading="lazy" /></div>
+    </div>
+    </div>
+  </section>
+
+  <section class="mg-spread">
+    <div class="page-shell">
+    <div class="mg-spread-inner">
+      <div class="mg-spread-text">
+        <span class="mg-label">Community</span>
+        <h2>Fitness Gurukul<br>Cycling Club</h2>
+        <p>Bringing the community together for the love of cycling. Monthly group rides every 3rd Sunday from My Home Avatar Cycling Hub, Hyderabad Cycling Track.</p>
+        <div class="mg-spread-routes">
+          <div class="mg-route"><span class="mg-route-dist"><strong>10K</strong></span><span class="mg-route-lvl">Rookie</span><span>First-timers welcome</span></div>
+          <div class="mg-route"><span class="mg-route-dist"><strong>25K</strong></span><span class="mg-route-lvl">Beginner</span><span>Scenic social roll</span></div>
+          <div class="mg-route"><span class="mg-route-dist"><strong>50K</strong></span><span class="mg-route-lvl">Interm.</span><span>Endurance sweet spot</span></div>
+          <div class="mg-route"><span class="mg-route-dist"><strong>100K</strong></span><span class="mg-route-lvl">Advanced</span><span>Ultimate test of grit</span></div>
+        </div>
+        <a class="primary-button" href="https://ifinish.in/cycling/FGCC-July" target="_blank" rel="noopener">Register on iFinish</a>
+      </div>
+      <div class="mg-spread-visual">
+        <img src="new%20%20ind/NW%20RIDE.jpeg" alt="FG New Ride" loading="lazy" />
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="mg-corporate" id="corporate">
+    <div class="page-shell">
+      <div class="mg-corporate-inner">
+        <div class="mg-corporate-text">
+          <span class="mg-label">Corporate &amp; Custom</span>
+          <h2>Wellness Events<br>for Your Organization</h2>
+          <p>Build healthier, happier teams with custom fitness experiences — from marathon management to onsite wellness programs. We handle everything so you can focus on your people.</p>
+          <div class="mg-corporate-offerings">
+            <div class="mg-corp-item">
+              <span class="mg-corp-icon">M</span>
+              <div><strong>Marathon &amp; Run Events</strong><span>End-to-end organization — route planning, permits, timing, medical, hydration, celebrations.</span></div>
+            </div>
+            <div class="mg-corp-item">
+              <span class="mg-corp-icon">C</span>
+              <div><strong>Cycling Adventures</strong><span>Team cycling challenges, guided rides, multi-day tours. Build camaraderie on two wheels.</span></div>
+            </div>
+            <div class="mg-corp-item">
+              <span class="mg-corp-icon">W</span>
+              <div><strong>Wellness Programs</strong><span>Onsite yoga, fitness bootcamps, health talks, step challenges, stress management workshops.</span></div>
+            </div>
+            <div class="mg-corp-item">
+              <span class="mg-corp-icon">O</span>
+              <div><strong>Obstacle Course Races</strong><span>Team-building OCR events with custom难度 levels. Perfect for annual days and offsites.</span></div>
+            </div>
+            <div class="mg-corp-item">
+              <span class="mg-corp-icon">T</span>
+              <div><strong>Team Building Retreats</strong><span>Multi-day fitness retreats combining training, nutrition workshops, and team activities.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mg-corporate-form-wrap">
+          <div class="mg-corp-form-card">
+            <h3>Plan Your Corporate Event</h3>
+            <p>Fill in the details and our events team will get back to you within 24 hours.</p>
+            <form id="corpEventForm">
+              <div class="mg-corp-row">
+                <label>Company Name<input name="company" required placeholder="e.g. TCS, Infosys" /></label>
+                <label>Contact Person<input name="contact_name" required placeholder="e.g. Priya Mehta" /></label>
+              </div>
+              <div class="mg-corp-row">
+                <label>Email<input name="email" type="email" required placeholder="priya@company.com" /></label>
+                <label>Phone<input name="phone" type="tel" required placeholder="+91 98765 43210" /></label>
+              </div>
+              <label>Event Type<select name="event_type" required>
+                <option value="">Select event type</option>
+                <option>Marathon / Run Event</option>
+                <option>Cycling Event</option>
+                <option>Wellness Program</option>
+                <option>Obstacle Course Race</option>
+                <option>Team Building Retreat</option>
+                <option>Health Talk / Workshop</option>
+                <option>Custom / Multi-Activity</option>
+              </select></label>
+              <div class="mg-corp-row">
+                <label>Expected Attendees<select name="attendees" required>
+                  <option value="">Select range</option>
+                  <option>10 - 50</option>
+                  <option>50 - 100</option>
+                  <option>100 - 250</option>
+                  <option>250 - 500</option>
+                  <option>500 - 1000</option>
+                  <option>1000+</option>
+                </select></label>
+                <label>Preferred Date<input name="preferred_date" type="date" /></label>
+              </div>
+              <div class="mg-corp-row">
+                <label>Budget Range<select name="budget">
+                  <option value="">Select budget</option>
+                  <option>Under ₹50,000</option>
+                  <option>₹50,000 - ₹1,00,000</option>
+                  <option>₹1,00,000 - ₹3,00,000</option>
+                  <option>₹3,00,000 - ₹5,00,000</option>
+                  <option>₹5,00,000+</option>
+                  <option>Flexible / Discuss</option>
+                </select></label>
+                <label>Location / City<input name="location" placeholder="e.g. Hyderabad, Bangalore" /></label>
+              </div>
+              <label>Additional Details<textarea name="message" rows="3" placeholder="Specific requirements, team size, venue preferences, branded merchandise, etc."></textarea></label>
+              <button class="primary-button mg-corp-submit" type="submit">Submit Inquiry</button>
+              <p class="mg-corp-form-status" id="corpFormStatus" role="status"></p>
+            </form>
+            <div class="mg-corp-trust">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+                No obligation
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+                24-hour response
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+                50+ events delivered
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mg-cta">
+    <div class="page-shell">
+    <div>
+      <h2>Want in on the next event?</h2>
+      <p>Individual, family, or organization — let's create something memorable.</p>
+    </div>
+    <a class="primary-button" href="contact.html">Get in Touch</a>
+    </div>
+  </section>
+</main>
+
+  <section class="fg-app-section reveal" style="padding-bottom:0">
+    <div class="page-shell" style="text-align:center">
+      <h2 style="font-size:1.6rem;margin-bottom:6px">Download the <em>App</em></h2>
+      <p style="color:var(--muted);margin-bottom:24px">Track workouts, book sessions, and stay connected — right from your phone.</p>
+      <div class="fg-app-stores">
+        <a class="fg-app-store-link" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+          <span class="fg-store-label">
+            <small>GET IT ON</small>
+            Google Play
+          </span>
+        </a>
+        <a class="fg-app-store-link" href="https://apps.apple.com/us/app/fitness-gurukul/id6771451272" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          <span class="fg-store-label">
+            <small>DOWNLOAD ON</small>
+            App Store
+          </span>
+        </a>
+      </div>
+      <div class="footer-news-social" style="justify-content:center;margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06)">
+        <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer footer-news">
+    <div class="footer-news-inner">
+      <div class="footer-news-proof">
+        <div class="footer-news-proof-item"><strong>50+</strong><span>Events</span></div>
+        <div class="footer-news-proof-item"><strong>10K+</strong><span>Participants</span></div>
+        <div class="footer-news-proof-item"><strong>13</strong><span>Years</span></div>
+      </div>
+      <div class="footer-news-main">
+        <div class="footer-news-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/fitness-gurukul-logo.png" alt="Fitness Gurukul" />
+            <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+          </a>
+          <p class="footer-news-tagline">Personal training, made personal. Hyderabad's trusted fitness coaching since 2013.</p>
+          <div class="footer-news-contact">
+            <a href="tel:+917207113310">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 72071 13310
+            </a>
+            <a href="mailto:contact@fitnessgurukul.co.in">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contact@fitnessgurukul.co.in
+            </a>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Manikonda, Hyderabad
+            </span>
+          </div>
+        </div>
+        <div class="footer-news-links">
+          <div class="footer-news-col">
+            <h4>Discover</h4>
+            <nav>
+              <a href="about.html">About Us</a>
+              <a href="coaches.html">Our Coaches</a>
+              <a href="testimonials.html">Testimonials</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Tools</h4>
+            <nav>
+              <a href="tools.html">BMI Calculator</a>
+              <a href="tools.html">BMR Calculator</a>
+              <a href="tools.html">Body Fat Calculator</a>
+              <a href="tools.html">Macro Calculator</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Support</h4>
+            <nav>
+              <a href="contact.html">Contact Us</a>
+              <a href="about.html">FAQ</a>
+              <a href="book-consultation.html">Book a Call</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer-news-bottom">
+        <p class="footer-news-copy">&copy; 2026 Fitness Gurukul. All rights reserved.</p>
+        <div class="footer-news-social">
+          <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+(function() {
+  var track = document.getElementById('galleryCarousel');
+  if (!track) return;
+  var interval = setInterval(function() {
+    var maxScroll = track.scrollWidth - track.clientWidth;
+    if (track.scrollLeft >= maxScroll - 10) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      track.scrollBy({ left: track.clientWidth * 0.5, behavior: 'smooth' });
+    }
+  }, 3000);
+  track.addEventListener('mouseenter', function() { clearInterval(interval); });
+  track.addEventListener('mouseleave', function() {
+    interval = setInterval(function() {
+      var maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 10) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: track.clientWidth * 0.5, behavior: 'smooth' });
+      }
+    }, 3000);
+  });
+})();
+</script>
+</body>
+</html>

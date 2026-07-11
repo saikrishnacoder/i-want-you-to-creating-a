@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitness Calculators | Fitness Gurukul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+        <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="coaches.html">Coaches</a>
+      <a href="events.html">Events</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="tools.html" class="active">Tools</a>
+    </nav>
+        <a class="header-play-btn" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+      <span>Get the App</span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+      <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="coaches.html">Coaches</a>
+  <a href="events.html">Events</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="tools.html">Tools</a>
+  </nav>
+
+  <main>
+    <section class="wk-hero">
+      <div class="wk-hero-content">
+        <h1 class="wk-hero-title">Fitness <span class="wk-accent">Calculators</span> &amp; Tools</h1>
+        <p class="wk-hero-desc">Free tools to dial in your training and nutrition. Science-backed formulas, zero fluff.</p>
+      </div>
+    </section>
+
+    <section class="section-shell" id="calcApp">
+      <div class="page-shell">
+      <div class="wk-section-header" id="calcHeader">
+        <h2>Start with your <span class="wk-accent">core numbers</span></h2>
+        <p>Three practical checks for your body composition and daily fuel needs.</p>
+      </div>
+
+      <div id="calcBrowser">
+        <div class="calc-layout" id="calcGrid"></div>
+      </div>
+
+      <div id="calcPanel" style="display:none">
+        <button class="cal-back" id="calcBack">&larr; All Calculators</button>
+        <div id="calcView"></div>
+      </div>
+      </div>
+    </section>
+
+    <section class="wk-cta">
+      <div class="page-shell">
+      <div class="wk-cta-inner">
+        <h2>Let a coach interpret your numbers</h2>
+        <p>Book a consultation and get a personalized plan based on your metrics.</p>
+        <div class="wk-cta-actions">
+          <a class="primary-button" href="book-consultation.html">Book a Consultation</a>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="fg-app-section reveal" style="padding-bottom:0">
+    <div class="page-shell" style="text-align:center">
+      <h2 style="font-size:1.6rem;margin-bottom:6px">Download the <em>App</em></h2>
+      <p style="color:var(--muted);margin-bottom:24px">Track workouts, book sessions, and stay connected — right from your phone.</p>
+      <div class="fg-app-stores">
+        <a class="fg-app-store-link" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+          <span class="fg-store-label">
+            <small>GET IT ON</small>
+            Google Play
+          </span>
+        </a>
+        <a class="fg-app-store-link" href="https://apps.apple.com/us/app/fitness-gurukul/id6771451272" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          <span class="fg-store-label">
+            <small>DOWNLOAD ON</small>
+            App Store
+          </span>
+        </a>
+      </div>
+      <div class="footer-news-social" style="justify-content:center;margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06)">
+        <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="site-footer footer-news">
+    <div class="footer-news-inner">
+      <div class="footer-news-proof">
+        <div class="footer-news-proof-item"><strong>50+</strong><span>Events</span></div>
+        <div class="footer-news-proof-item"><strong>10K+</strong><span>Participants</span></div>
+        <div class="footer-news-proof-item"><strong>13</strong><span>Years</span></div>
+      </div>
+      <div class="footer-news-main">
+        <div class="footer-news-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/fitness-gurukul-logo.png" alt="Fitness Gurukul" />
+            <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+          </a>
+          <p class="footer-news-tagline">Personal training, made personal. Hyderabad's trusted fitness coaching since 2013.</p>
+          <div class="footer-news-contact">
+            <a href="tel:+917207113310">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 72071 13310
+            </a>
+            <a href="mailto:contact@fitnessgurukul.co.in">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contact@fitnessgurukul.co.in
+            </a>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Manikonda, Hyderabad
+            </span>
+          </div>
+        </div>
+        <div class="footer-news-links">
+          <div class="footer-news-col">
+            <h4>Discover</h4>
+            <nav>
+              <a href="about.html">About Us</a>
+              <a href="coaches.html">Our Coaches</a>
+              <a href="testimonials.html">Testimonials</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Tools</h4>
+            <nav>
+              <a href="tools.html">BMI Calculator</a>
+              <a href="tools.html">BMR Calculator</a>
+              <a href="tools.html">Body Fat Calculator</a>
+              <a href="tools.html">Macro Calculator</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Support</h4>
+            <nav>
+              <a href="contact.html">Contact Us</a>
+              <a href="about.html">FAQ</a>
+              <a href="book-consultation.html">Book a Call</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer-news-bottom">
+        <p class="footer-news-copy">&copy; 2026 Fitness Gurukul. All rights reserved.</p>
+        <div class="footer-news-social">
+          <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- footer injected by JS -->
+
+  <script>
+    (function() {
+      var calculators = [
+        {
+          slug: "bmi", title: "BMI Calculator", icon: "\ud83d\udcca", cat: "Body Composition",
+          desc: "Body mass index with category rating",
+          fields: [
+            { n: "weight", l: "Body Weight", p: "e.g. 70", u: "kg" },
+            { n: "height", l: "Height", p: "e.g. 175", u: "cm" }
+          ],
+          calc: function(v) {
+            var h = v.height / 100;
+            var r = v.weight / (h * h);
+            var rating = r < 18.5 ? "Underweight" : r < 25 ? "Normal" : r < 30 ? "Overweight" : "Obese";
+            var color = r < 18.5 ? "yellow" : r < 25 ? "green" : r < 30 ? "orange" : "red";
+            return {
+              result: r.toFixed(1), label: "Body Mass Index", unit: "kg/m\u00b2",
+              rating: rating, color: color,
+              breakdown: [
+                { label: "Underweight", value: "< 18.5" },
+                { label: "Normal", value: "18.5 \u2013 24.9" },
+                { label: "Overweight", value: "25.0 \u2013 29.9" },
+                { label: "Obese", value: "30.0+" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "1rm", title: "One-Rep Max Calculator", icon: "\ud83c\udfcb\ufe0f", cat: "Strength",
+          desc: "Estimate your one-rep max from any weight and rep count using the Epley formula",
+          fields: [
+            { n: "weight", l: "Weight Lifted", p: "e.g. 100", u: "kg" },
+            { n: "reps", l: "Reps Completed", p: "e.g. 5", u: "reps", min: 1, max: 30 }
+          ],
+          calc: function(v) {
+            var a = v.weight * (1 + v.reps / 30);
+            return {
+              result: Math.round(a), label: "Estimated 1RM", unit: "kg",
+              breakdown: [
+                { label: "90% (2-3 reps)", value: Math.round(0.9 * a) + " kg" },
+                { label: "80% (5-6 reps)", value: Math.round(0.8 * a) + " kg" },
+                { label: "70% (8-10 reps)", value: Math.round(0.7 * a) + " kg" },
+                { label: "60% (12-15 reps)", value: Math.round(0.6 * a) + " kg" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "tdee", title: "TDEE Calculator", icon: "\ud83d\udd25", cat: "Nutrition",
+          desc: "Estimate your total daily energy expenditure based on activity level",
+          fields: [
+            { n: "age", l: "Age", p: "e.g. 30", u: "years" },
+            { n: "weight", l: "Weight", p: "e.g. 70", u: "kg" },
+            { n: "height", l: "Height", p: "e.g. 175", u: "cm" },
+            { n: "gender", l: "Gender", type: "select", options: ["male","female"] },
+            { n: "activity", l: "Activity Level", type: "select",
+              options: [
+                { v: "1.2", l: "Sedentary (desk job)" },
+                { v: "1.375", l: "Light (1-3 days/wk)" },
+                { v: "1.55", l: "Moderate (3-5 days/wk)" },
+                { v: "1.725", l: "Very Active (6-7 days/wk)" },
+                { v: "1.9", l: "Extreme (athlete)" }
+              ]
+            }
+          ],
+          calc: function(v) {
+            var bmr = v.gender === "male"
+              ? 10 * v.weight + 6.25 * v.height - 5 * v.age + 5
+              : 10 * v.weight + 6.25 * v.height - 5 * v.age - 161;
+            var tdee = bmr * parseFloat(v.activity);
+            var def = tdee - 500;
+            var surp = tdee + 300;
+            return {
+              result: Math.round(tdee), label: "Total Daily Energy Expenditure", unit: "kcal",
+              breakdown: [
+                { label: "Maintenance", value: Math.round(tdee) + " kcal" },
+                { label: "Fat Loss (-500)", value: Math.round(def) + " kcal" },
+                { label: "Muscle Gain (+300)", value: Math.round(surp) + " kcal" },
+                { label: "BMR (basal)", value: Math.round(bmr) + " kcal" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "bodyfat", title: "Body Fat Percentage", icon: "\ud83d\udccf", cat: "Body Composition",
+          desc: "Estimate body fat using the BMI-based formula",
+          fields: [
+            { n: "bmi", l: "Your BMI", p: "e.g. 24.5", u: "" },
+            { n: "age", l: "Age", p: "e.g. 30", u: "years" },
+            { n: "gender", l: "Gender", type: "select", options: ["male","female"] }
+          ],
+          calc: function(v) {
+            var bf;
+            if (v.gender === "male") {
+              bf = 1.20 * v.bmi + 0.23 * v.age - 16.2;
+            } else {
+              bf = 1.20 * v.bmi + 0.23 * v.age - 5.4;
+            }
+            bf = Math.max(bf, 3);
+            var rating = bf < 6 ? "Essential Fat" : bf < 14 ? "Athlete" : bf < 18 ? "Fitness" : bf < 25 ? "Average" : "Obese";
+            return {
+              result: bf.toFixed(1), label: "Estimated Body Fat", unit: "%",
+              rating: rating,
+              breakdown: [
+                { label: "Essential Fat", value: "3-5% (M) / 8-12% (F)" },
+                { label: "Athlete", value: "6-13% (M) / 14-20% (F)" },
+                { label: "Fitness", value: "14-17% (M) / 21-24% (F)" },
+                { label: "Average", value: "18-24% (M) / 25-31% (F)" },
+                { label: "Obese", value: "25%+ (M) / 32%+ (F)" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "ideal-weight", title: "Ideal Body Weight", icon: "\u2696\ufe0f", cat: "Body Composition",
+          desc: "Calculate your ideal body weight based on height and gender using the Devine formula",
+          fields: [
+            { n: "height", l: "Height", p: "e.g. 175", u: "cm" },
+            { n: "gender", l: "Gender", type: "select", options: ["male","female"] }
+          ],
+          calc: function(v) {
+            var hIn = v.height / 2.54;
+            var base = v.gender === "male" ? 50 : 45.5;
+            var diff = Math.max(0, hIn - 60);
+            var ibw = base + diff * 2.3;
+            var rangeLow = Math.round(ibw * 0.9);
+            var rangeHigh = Math.round(ibw * 1.1);
+            return {
+              result: Math.round(ibw), label: "Ideal Body Weight", unit: "kg",
+              breakdown: [
+                { label: "Healthy Range (90-110%)", value: rangeLow + " \u2013 " + rangeHigh + " kg" },
+                { label: "Formula", value: "Devine (1974)" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "lean-body-mass", title: "Lean Body Mass", icon: "\ud83d\udcaa", cat: "Body Composition",
+          desc: "Calculate your lean body mass from weight and body fat percentage",
+          fields: [
+            { n: "weight", l: "Weight", p: "e.g. 70", u: "kg" },
+            { n: "bf", l: "Body Fat %", p: "e.g. 15", u: "%" }
+          ],
+          calc: function(v) {
+            var lbm = v.weight * (1 - v.bf / 100);
+            var fat = v.weight - lbm;
+            return {
+              result: Math.round(lbm), label: "Lean Body Mass", unit: "kg",
+              breakdown: [
+                { label: "Fat Mass", value: Math.round(fat) + " kg" },
+                { label: "Body Fat", value: v.bf + "%" },
+                { label: "LBM Percentage", value: (lbm / v.weight * 100).toFixed(1) + "%" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "protein", title: "Daily Protein Intake", icon: "\ud83e\udd69", cat: "Nutrition",
+          desc: "Calculate optimal daily protein intake based on weight and activity level",
+          fields: [
+            { n: "weight", l: "Weight", p: "e.g. 70", u: "kg" },
+            { n: "goal", l: "Goal", type: "select",
+              options: [
+                { v: "1.6", l: "General health" },
+                { v: "1.8", l: "Weight loss" },
+                { v: "2.0", l: "Muscle building" },
+                { v: "2.2", l: "Intensive training" }
+              ]
+            }
+          ],
+          calc: function(v) {
+            var low = Math.round(v.weight * 1.6);
+            var high = Math.round(v.weight * parseFloat(v.goal));
+            return {
+              result: high, label: "Daily Protein Target", unit: "g",
+              breakdown: [
+                { label: "Minimum (1.6 g/kg)", value: low + " g" },
+                { label: "Your Target", value: high + " g" },
+                { label: "Max per meal (4 meals)", value: Math.round(high / 4) + " g" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "macro", title: "Macro Calculator", icon: "\ud83e\udd57", cat: "Nutrition",
+          desc: "Get your personalized carb, protein, and fat split based on your TDEE and goal",
+          fields: [
+            { n: "tdee", l: "Your TDEE", p: "e.g. 2500", u: "kcal" },
+            { n: "goal", l: "Goal", type: "select",
+              options: [
+                { v: "maintain", l: "Maintain" },
+                { v: "lose", l: "Fat Loss (-20%)" },
+                { v: "gain", l: "Muscle Gain (+10%)" }
+              ]
+            }
+          ],
+          calc: function(v) {
+            var cal = v.goal === "lose" ? v.tdee * 0.8 : v.goal === "gain" ? v.tdee * 1.1 : v.tdee;
+            var protein = Math.round(v.tdee * 0.3 / 4);
+            var fat = Math.round(v.tdee * 0.25 / 9);
+            var carbs = Math.round((cal - (protein * 4 + fat * 9)) / 4);
+            return {
+              result: Math.round(cal), label: "Daily Calories", unit: "kcal",
+              breakdown: [
+                { label: "Protein (" + Math.round(protein * 4 / cal * 100) + "%)", value: protein + " g (" + protein * 4 + " kcal)" },
+                { label: "Carbs (" + Math.round(carbs * 4 / cal * 100) + "%)", value: carbs + " g (" + carbs * 4 + " kcal)" },
+                { label: "Fat (" + Math.round(fat * 9 / cal * 100) + "%)", value: fat + " g (" + fat * 9 + " kcal)" },
+                { label: "Total", value: Math.round(cal) + " kcal" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "whr", title: "Waist-to-Hip Ratio", icon: "\ud83d\udccd", cat: "Body Composition",
+          desc: "Measure your waist-to-hip ratio to assess fat distribution and health risk",
+          fields: [
+            { n: "waist", l: "Waist Circumference", p: "e.g. 80", u: "cm" },
+            { n: "hip", l: "Hip Circumference", p: "e.g. 95", u: "cm" },
+            { n: "gender", l: "Gender", type: "select", options: ["male","female"] }
+          ],
+          calc: function(v) {
+            var ratio = v.waist / v.hip;
+            var riskLow = v.gender === "male" ? 0.90 : 0.80;
+            var riskHigh = v.gender === "male" ? 0.95 : 0.85;
+            var risk = ratio < riskLow ? "Low" : ratio < riskHigh ? "Moderate" : "High";
+            return {
+              result: ratio.toFixed(2), label: "Waist-to-Hip Ratio", unit: "",
+              rating: risk + " Risk",
+              breakdown: [
+                { label: "Low Risk", value: "< " + riskLow + " (" + (v.gender === "male" ? "M" : "F") + ")" },
+                { label: "Moderate Risk", value: riskLow + " \u2013 " + riskHigh },
+                { label: "High Risk", value: "> " + riskHigh }
+              ]
+            };
+          }
+        },
+        {
+          slug: "max-hr", title: "Max Heart Rate", icon: "\u2764\ufe0f", cat: "Recovery",
+          desc: "Estimate your maximum heart rate using the age-based formula",
+          fields: [
+            { n: "age", l: "Age", p: "e.g. 30", u: "years" }
+          ],
+          calc: function(v) {
+            var mhr = 220 - v.age;
+            var zone2 = [Math.round(mhr * 0.6), Math.round(mhr * 0.7)];
+            var zone4 = [Math.round(mhr * 0.8), Math.round(mhr * 0.9)];
+            return {
+              result: mhr, label: "Max Heart Rate", unit: "bpm",
+              breakdown: [
+                { label: "Zone 2 (Fat Burn)", value: zone2[0] + " \u2013 " + zone2[1] + " bpm" },
+                { label: "Zone 3 (Cardio)", value: Math.round(mhr * 0.7) + " \u2013 " + Math.round(mhr * 0.8) + " bpm" },
+                { label: "Zone 4 (Threshold)", value: zone4[0] + " \u2013 " + zone4[1] + " bpm" },
+                { label: "Zone 5 (Max)", value: Math.round(mhr * 0.9) + " \u2013 " + mhr + " bpm" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "sleep", title: "Sleep Calculator", icon: "\ud83d\ude34", cat: "Recovery",
+          desc: "Plan your sleep schedule based on 90-minute sleep cycles",
+          fields: [
+            { n: "wake", l: "Wake-up Time", p: "e.g. 6:00", u: "", type: "time" },
+            { n: "cycles", l: "Sleep Cycles", type: "select",
+              options: [
+                { v: "5", l: "5 cycles (7.5 hrs)" },
+                { v: "6", l: "6 cycles (9 hrs)" },
+                { v: "4", l: "4 cycles (6 hrs)" }
+              ]
+            }
+          ],
+          calc: function(v) {
+            var parts = v.wake.split(":");
+            var hrs = parseInt(parts[0]);
+            var mins = parseInt(parts[1]) || 0;
+            var totalMins = (hrs * 60 + mins) - parseInt(v.cycles) * 90;
+            if (totalMins < 0) totalMins += 1440;
+            var bedHr = Math.floor(totalMins / 60);
+            var bedMin = totalMins % 60;
+            return {
+              result: ("0" + bedHr).slice(-2) + ":" + ("0" + bedMin).slice(-2),
+              label: "Bedtime", unit: "",
+              breakdown: [
+                { label: "Cycles", value: v.cycles + " cycles (" + (parseInt(v.cycles) * 90 / 60) + " hrs)" },
+                { label: "Wake-up", value: v.wake },
+                { label: "Falling asleep (est.)", value: "15 min before bedtime" }
+              ]
+            };
+          }
+        },
+        {
+          slug: "bmd", title: "Bone Health Risk Assessment", icon: "\ud83e\uddb4", cat: "Health",
+          desc: "Estimate your risk of low bone mineral density based on lifestyle factors",
+          fields: [
+            { n: "age", l: "Age", p: "e.g. 45", u: "years" },
+            { n: "weight", l: "Weight", p: "e.g. 65", u: "kg" },
+            { n: "gender", l: "Gender", type: "select", options: ["male","female"] },
+            { n: "family", l: "Family History", type: "select", options: [
+              { v: "no", l: "No" }, { v: "yes", l: "Yes" }
+            ]},
+            { n: "activity", l: "Physical Activity", type: "select", options: [
+              { v: "active", l: "Active (3+ days/wk)" },
+              { v: "moderate", l: "Moderate (1-2 days/wk)" },
+              { v: "sedentary", l: "Sedentary" }
+            ]},
+            { n: "smoking", l: "Smoking", type: "select", options: [
+              { v: "no", l: "Non-smoker" },
+              { v: "past", l: "Past smoker" },
+              { v: "current", l: "Current smoker" }
+            ]}
+          ],
+          calc: function(v) {
+            var score = 0;
+            if (v.age > 65) score += 3; else if (v.age > 50) score += 2; else if (v.age > 35) score += 1;
+            if (v.weight < 50) score += 2; else if (v.weight < 60) score += 1;
+            if (v.gender === "female") score += 1;
+            if (v.family === "yes") score += 2;
+            if (v.activity === "sedentary") score += 2; else if (v.activity === "moderate") score += 1;
+            if (v.smoking === "current") score += 2; else if (v.smoking === "past") score += 1;
+            var risk = score <= 2 ? "Low Risk" : score <= 5 ? "Moderate Risk" : "High Risk";
+            return {
+              result: risk, label: "Bone Health Risk", unit: "",
+              breakdown: [
+                { label: "Low Risk (0-2)", value: "Maintain with exercise & nutrition" },
+                { label: "Moderate Risk (3-5)", value: "Consider DEXA scan" },
+                { label: "High Risk (6+)", value: "Consult your doctor" }
+              ]
+            };
+          }
+        }
+      ];
+
+      var grid = document.getElementById("calcGrid");
+      var browser = document.getElementById("calcBrowser");
+      var panel = document.getElementById("calcPanel");
+      var view = document.getElementById("calcView");
+      var back = document.getElementById("calcBack");
+      var header = document.getElementById("calcHeader");
+
+      function renderGrid() {
+        var featuredSlugs = ["bmi", "tdee", "whr"];
+        var featured = calculators.filter(function(c) { return featuredSlugs.indexOf(c.slug) !== -1; });
+        var remaining = calculators.filter(function(c) { return featuredSlugs.indexOf(c.slug) === -1; });
+        function card(c, featuredCard) {
+          return '<button class="cl-card cal-trigger' + (featuredCard ? ' cl-card--featured' : '') + '" data-slug="' + c.slug + '">' +
+            '<span class="cl-card-emoji">' + c.icon + '</span>' +
+            '<h4 class="cl-card-title">' + c.title + '</h4>' +
+            '<p class="cl-card-desc">' + c.desc + '</p>' +
+            '<span class="cl-card-cat">' + c.cat + '</span>' +
+            '</button>';
+        }
+        grid.innerHTML = '<div class="calc-featured-grid">' + featured.map(function(c) { return card(c, true); }).join("") + '</div>' +
+          '<div class="calc-more-heading"><span>More tools</span><p>Explore the rest whenever you need them.</p></div>' +
+          '<div class="calc-more-grid">' + remaining.map(function(c) { return card(c, false); }).join("") + '</div>';
+        Array.from(document.querySelectorAll(".cal-trigger")).forEach(function(btn) {
+          btn.addEventListener("click", function() { openCalc(btn.dataset.slug); });
+        });
+      }
+
+      function openCalc(slug) {
+        var calc = null;
+        for (var i = 0; i < calculators.length; i++) {
+          if (calculators[i].slug === slug) { calc = calculators[i]; break; }
+        }
+        if (!calc) return;
+        browser.style.display = "none";
+        panel.style.display = "block";
+        header.querySelector("p").textContent = calc.title;
+        renderCalcView(calc);
+        window.scrollTo({ top: panel.offsetTop - 80, behavior: "smooth" });
+      }
+
+      function closeCalc() {
+        panel.style.display = "none";
+        browser.style.display = "block";
+        header.querySelector("p").textContent = "Three practical checks for your body composition and daily fuel needs.";
+        window.scrollTo({ top: header.offsetTop - 80, behavior: "smooth" });
+      }
+
+      back.addEventListener("click", closeCalc);
+
+      function renderCalcView(calc) {
+        var html = '<div class="cal-view-inner">';
+        html += '<div class="cal-view-header"><span class="cal-view-icon">' + calc.icon + '</span><div><h2>' + calc.title + '</h2><p>' + calc.desc + '</p></div></div>';
+        html += '<div class="cal-form" id="calForm">';
+        calc.fields.forEach(function(f) {
+          html += '<label class="cal-field">' +
+            '<span class="cal-field-label">' + f.l + '</span>';
+          if (f.type === "select") {
+            html += '<select class="cal-input" data-name="' + f.n + '">';
+            f.options.forEach(function(o) {
+              if (typeof o === "string") {
+                html += '<option value="' + o + '">' + o.charAt(0).toUpperCase() + o.slice(1) + '</option>';
+              } else {
+                html += '<option value="' + o.v + '">' + o.l + '</option>';
+              }
+            });
+            html += '</select>';
+          } else {
+            html += '<input class="cal-input" data-name="' + f.n + '" type="' + (f.type === "time" ? "time" : "number") + '" placeholder="' + f.p + '"' + (f.min ? ' min="' + f.min + '"' : '') + (f.max ? ' max="' + f.max + '"' : '') + ' step="any" />';
+          }
+          html += '</label>';
+        });
+        html += '</div>';
+        html += '<button class="primary-button cal-submit" id="calcSubmit">Calculate</button>';
+        html += '<div class="cal-result" id="calResult" style="display:none"></div>';
+        html += '</div>';
+        view.innerHTML = html;
+
+        var inputs = view.querySelectorAll(".cal-input");
+        var submit = document.getElementById("calcSubmit");
+        var resultDiv = document.getElementById("calResult");
+
+        function doCalc() {
+          var values = {};
+          inputs.forEach(function(inp) {
+            var name = inp.dataset.name;
+            if (inp.type === "select") {
+              values[name] = inp.value;
+            } else if (inp.type === "time") {
+              values[name] = inp.value;
+            } else {
+              values[name] = parseFloat(inp.value) || 0;
+            }
+          });
+          var res = calc.calc(values);
+          var rh = '<div class="cal-result-main">';
+          rh += '<div class="cal-result-value"><span class="cal-result-num">' + res.result + '</span>';
+          if (res.unit) rh += '<span class="cal-result-unit">' + res.unit + '</span>';
+          rh += '</div>';
+          rh += '<div class="cal-result-label">' + res.label + '</div>';
+          if (res.rating) {
+            var col = res.color === "green" ? "#4ade80" : res.color === "yellow" ? "#facc15" : res.color === "orange" ? "#fb923c" : res.color === "red" ? "#f87171" : "#94a3b8";
+            rh += '<span class="cal-result-rating" style="border-color:' + col + ';color:' + col + '">' + res.rating + '</span>';
+          }
+          rh += '</div>';
+          if (res.breakdown && res.breakdown.length) {
+            rh += '<div class="cal-breakdown"><h4>Reference</h4>';
+            rh += '<div class="cal-breakdown-list">';
+            res.breakdown.forEach(function(b) {
+              rh += '<div class="cal-breakdown-item"><span>' + b.label + '</span><span class="cal-breakdown-val">' + b.value + '</span></div>';
+            });
+            rh += '</div></div>';
+          }
+          rh += '<div style="margin-top:16px;text-align:center">' +
+            '<a class="primary-button" href="https://wa.me/917207113310?text=I%20just%20used%20Fitness%20Gurukul%27s%20' + encodeURIComponent(calc.title) + '.%20My%20result:%20' + encodeURIComponent(res.result + (res.unit ? ' ' + res.unit : '') + (res.rating ? ' (' + res.rating + ')' : '')) + '" target="_blank" rel="noopener" style="justify-content:center;gap:8px;font-size:0.85rem">' +
+            '<svg viewBox="0 0 32 32" fill="white" width="18" height="18"><path d="M16 2C8.268 2 2 8.268 2 16c0 3.03 1.06 5.826 2.828 8.028L3.54 28.46l4.712-1.287A13.938 13.938 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 2c6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.317 0-4.48-.66-6.32-1.8l-.46-.28-3.52.96.96-3.44-.3-.48A11.933 11.933 0 0 1 4 16C4 9.373 9.373 4 16 4z"/></svg>' +
+            'Share with your coach on WhatsApp' +
+            '</a></div>';
+          resultDiv.innerHTML = rh;
+          resultDiv.style.display = "block";
+          var record = { calculator: calc.slug, title: calc.title, result: String(res.result), unit: res.unit || "", rating: res.rating || "", createdAt: new Date().toISOString() };
+          try {
+            var history = JSON.parse(localStorage.getItem("fg_calculator_results") || "[]");
+            history.unshift(record);
+            localStorage.setItem("fg_calculator_results", JSON.stringify(history.slice(0, 50)));
+            if (window.fetch) {
+              fetch("/api/calculations", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(record) }).catch(function() {});
+            }
+          } catch (e) { /* Calculation still works when browser storage is unavailable. */ }
+        }
+
+        submit.addEventListener("click", doCalc);
+        inputs.forEach(function(inp) {
+          if (inp.type === "number") {
+            inp.addEventListener("keydown", function(e) { if (e.key === "Enter") doCalc(); });
+          }
+        });
+      }
+
+      renderGrid();
+    })();
+  </script>
+</body>
+</html>

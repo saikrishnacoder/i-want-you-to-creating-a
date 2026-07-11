@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Coaches | Fitness Gurukul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+        <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="coaches.html">Coaches</a>
+
+      <a href="events.html">Events</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+        <a class="header-play-btn" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+      <span>Get the App</span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+      <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="coaches.html">Coaches</a>
+
+  <a href="events.html">Events</a>
+    <a href="testimonials.html">Testimonials</a>
+  <a href="tools.html">Tools</a>
+  </nav>
+
+  <main>
+    <!-- Fittr-style Hero -->
+    <section class="hero-fittr">
+      <div class="hero-fittr-bg">
+        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1600&q=80" alt="" />
+      </div>
+      <div class="hero-fittr-overlay"></div>
+      <div class="hero-fittr-content">
+        <span class="hero-fittr-badge">Elite Coaching Team</span>
+        <h1 class="hero-fittr-headline">Meet the Minds Behind Your Transformation</h1>
+        <p class="hero-fittr-sub">24 certified professionals, each with a unique specialty — from yoga and strength to sports conditioning and rehab — united by one mission: your success.</p>
+        <a class="primary-button" href="#allCoaches" style="justify-content:center">Find Your Coach</a>
+      </div>
+      <div class="hero-fittr-counters">
+        <div class="counter-item"><span class="counter-num" data-target="10">10+</span><span class="counter-label">Expert Coaches</span></div>
+        <div class="counter-item"><span class="counter-num" data-target="13">13</span><span class="counter-label">Years Combined Experience</span></div>
+        <div class="counter-item"><span class="counter-num" data-target="7">7</span><span class="counter-label">Specialties</span></div>
+      </div>
+    </section>
+
+    <!-- Our Coaching Categories -->
+    <section class="section-shell">
+      <div class="page-shell">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker" style="display:block;margin-bottom:6px">Specialties</span>
+          <h2>Our Coaching Categories</h2>
+          <p>From yoga and calisthenics to sports performance and rehab — find the expertise you need</p>
+        </div>
+      </div>
+      <div class="eco-scroll-wrap">
+        <div class="eco-scroll-track coach-scroll-track">
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🧘</span></div>
+            <h3>Yoga &amp; Mindfulness</h3>
+            <p class="psc-short">Breathwork, flexibility, mobility, and stress management through structured yoga practice.</p>
+            <span class="psc-card-tag">6 Coaches</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🏋️</span></div>
+            <h3>Fitness &amp; Strength</h3>
+            <p class="psc-short">Personal training, weight loss, bodybuilding, calisthenics, and general strength conditioning.</p>
+            <span class="psc-card-tag">12 Coaches</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🏀</span></div>
+            <h3>Sports Coaching</h3>
+            <p class="psc-short">Sport-specific training for basketball, athletics, and competitive performance conditioning.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>👶</span></div>
+            <h3>Kids Fitness</h3>
+            <p class="psc-short">Age-appropriate athletic development for children — building motor skills, coordination, and confidence.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🩺</span></div>
+            <h3>Injury Rehab</h3>
+            <p class="psc-short">Post-injury recovery programming and rehabilitation training to get you back stronger.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>❤️</span></div>
+            <h3>Special Needs</h3>
+            <p class="psc-short">Adapted fitness programs for special children — focusing on mobility, strength, and motor skills.</p>
+            <span class="psc-card-tag">2 Coaches</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>⚡</span></div>
+            <h3>Hybrid Training</h3>
+            <p class="psc-short">Mudgar, traditional Indian clubs, and hybrid modalities for functional strength and conditioning.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <!-- duplicate for seamless loop -->
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🧘</span></div>
+            <h3>Yoga &amp; Mindfulness</h3>
+            <p class="psc-short">Breathwork, flexibility, mobility, and stress management through structured yoga practice.</p>
+            <span class="psc-card-tag">6 Coaches</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🏋️</span></div>
+            <h3>Fitness &amp; Strength</h3>
+            <p class="psc-short">Personal training, weight loss, bodybuilding, calisthenics, and general strength conditioning.</p>
+            <span class="psc-card-tag">12 Coaches</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🏀</span></div>
+            <h3>Sports Coaching</h3>
+            <p class="psc-short">Sport-specific training for basketball, athletics, and competitive performance conditioning.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>👶</span></div>
+            <h3>Kids Fitness</h3>
+            <p class="psc-short">Age-appropriate athletic development for children — building motor skills, coordination, and confidence.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>🩺</span></div>
+            <h3>Injury Rehab</h3>
+            <p class="psc-short">Post-injury recovery programming and rehabilitation training to get you back stronger.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>❤️</span></div>
+            <h3>Special Needs</h3>
+            <p class="psc-short">Adapted fitness programs for special children — focusing on mobility, strength, and motor skills.</p>
+            <span class="psc-card-tag">2 Coaches</span>
+          </article>
+          <article class="psc-card-accent cc-card" style="--accent:var(--white)">
+            <div class="psc-card-icon"><span>⚡</span></div>
+            <h3>Hybrid Training</h3>
+            <p class="psc-short">Mudgar, traditional Indian clubs, and hybrid modalities for functional strength and conditioning.</p>
+            <span class="psc-card-tag">1 Coach</span>
+          </article>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- All Coaches -->
+    <section class="section-shell" id="allCoaches">
+      <div class="page-shell">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker" style="display:block;margin-bottom:6px">Team</span>
+          <h2>All Coaches</h2>
+          <p>Browse our full roster of certified professionals and find the perfect match for your goals</p>
+        </div>
+      </div>
+      <div class="coach-tools">
+        <div class="coach-tools-row">
+          <input id="coachSearch" placeholder="Search by name..." />
+          <select id="coachRatingFilter">
+            <option value="all">All Ratings</option>
+            <option value="4.9">4.9+</option>
+            <option value="4.8">4.8+</option>
+            <option value="4.7">4.7+</option>
+            <option value="4.6">4.6+</option>
+          </select>
+        </div>
+        <div class="filter-tabs" id="coachFilters">
+          <button data-coach-filter="all" class="active">All</button>
+          <button data-coach-filter="yoga">Yoga</button>
+          <button data-coach-filter="fitness">Fitness</button>
+          <button data-coach-filter="sports">Sports</button>
+          <button data-coach-filter="kids">Kids</button>
+          <button data-coach-filter="rehab">Rehab</button>
+          <button data-coach-filter="special">Special</button>
+          <button data-coach-filter="hybrid">Hybrid</button>
+        </div>
+      </div>
+      <div class="coach-grid" id="coachGrid">
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="aditya-gururani">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0302-69538f34664ae75da3c69fce.jpg" alt="Aditya Gururani" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Yoga Instructor &amp; Breathing Specialist</small>
+    <h3>Aditya Gururani</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Breathwork</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Stress management</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Functional mobility</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.9</span><span class="ccv2-clients">70 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="b-yashwanth">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0305-6953918f0222ba9c3d831822.jpeg" alt="B Yashwanth" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Basketball Coach</small>
+    <h3>B Yashwanth</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Basketball</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Sports coaching</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Conditioning</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">40 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="shivajeet-kanaujiya">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0300-69538ef2474cc000b54586c5.jpg" alt="Shivajeet Kanaujiya" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Shivajeet Kanaujiya</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Daily exercise</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">50 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="anand-yadav">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0297-69538d52664ae75da3c69fc1.jpg" alt="Anand Yadav" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Children's Athletics Coach</small>
+    <h3>Anand Yadav</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Children's athletics</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Kids fitness</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Sports</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">35 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="aditya">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0298-69538dd1474cc000b54586be.jpg" alt="Aditya" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Yoga Instructor &amp; Fitness Coach</small>
+    <h3>Aditya</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Yoga</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Body toning</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">55 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="nitu-arya">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0295-69538d35474cc000b54586b7.jpg" alt="Nitu Arya" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Yoga Instructor</small>
+    <h3>Nitu Arya</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Yoga</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Flexibility</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">General fitness</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">45 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="rahul-bisht">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0294-69538d19474cc000b54586b4.jpg" alt="Rahul Bisht" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Yoga Instructor</small>
+    <h3>Rahul Bisht</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Yoga</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Mobility</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">General fitness</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.6</span><span class="ccv2-clients">40 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="deepesh-kumar">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0293-69538d00664ae75da3c69fbc.jpg" alt="Deepesh Kumar" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Deepesh Kumar</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Weight loss</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">55 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="s-jeetender">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0292-69538ce6474cc000b54586b3.jpg" alt="S Jeetender" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>S Jeetender</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Daily exercise</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">45 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="rahul-dawar">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0291-69538ccf8c7b7b2c6178b6e1.jpg" alt="Rahul Dawar" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Rahul Dawar</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Health routine</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">50 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="rahul-singh-pawar">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0290-69538cb65c5bdcd270817b1f.jpg" alt="Rahul Singh Pawar" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Yoga Instructor</small>
+    <h3>Rahul Singh Pawar</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Yoga</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Flexibility</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Stress relief</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">40 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="ravi-pal">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/img_0289-69538c800222ba9c3d831802.jpg" alt="Ravi Pal" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer &amp; Injury Rehabilitation Coach</small>
+    <h3>Ravi Pal</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Injury rehabilitation</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Recovery</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.9</span><span class="ccv2-clients">50 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="sanjeev">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/274dba00-8541-4bfc-8666-e0b5433b3781-69538a190222ba9c3d8317f4.jpg" alt="Sanjeev" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Sanjeev</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Daily exercise</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">45 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="nandlal">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/04ea7dfe-a988-4a17-97cb-8dc44240cb59-695389c4474cc000b54586a8.jpg" alt="Nandlal" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Nandlal</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Weight loss</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">50 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="prasenjit-ghosh">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/db612d80-360a-4c76-9a18-0e97da5d1dc9-69538988474cc000b54586a5.jpg" alt="Prasenjit Ghosh" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Mudgar &amp; Hybrid Training Specialist</small>
+    <h3>Prasenjit Ghosh</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Mudgar</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Hybrid training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.9</span><span class="ccv2-clients">45 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="vinay-ojha">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/32f29c04-6a08-46c7-b752-810892edad88-695388d0664ae75da3c69fa9.jpg" alt="Vinay Ojha" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Vinay Ojha</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">General fitness</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">45 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="ankit-singh-chauhan">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/debb9e52-bcf2-4630-8cc5-2ffc9af3e114-69538879664ae75da3c69fa8.jpg" alt="Ankit Singh Chauhan" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness &amp; Calisthenics Trainer</small>
+    <h3>Ankit Singh Chauhan</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Calisthenics</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">40 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="suresh-yadav">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/suresh-695209865c5bdcd270817774.jpeg" alt="Suresh Yadav" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer (Special Children)</small>
+    <h3>Suresh Yadav</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Special children</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Mobility</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">35 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="parul-danu">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/parul-695209395c5bdcd270817773.jpeg" alt="Parul Danu" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Yoga Instructor</small>
+    <h3>Parul Danu</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Yoga</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Flexibility</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Stress relief</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">40 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="raju">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/raju-69520adb8c7b7b2c6178b36b.jpeg" alt="Raju" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Raju</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Health routine</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.7</span><span class="ccv2-clients">45 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+<article class="coach-card-v2" style="--coach-accent:var(--white)" data-coach-id="vishal-choudhary">
+  <div class="ccv2-avatar" style="color:var(--white)">
+    <img class="ccv2-avatar-img" src="https://web.s-cdn.boostkit.dev/webaction-files/67dd161916df35677e31c42c_myteam/vishal-69520b6a5c5bdcd270817783.jpeg" alt="Vishal Choudhary" />
+  </div>
+  <div class="ccv2-body">
+    <small class="ccv2-role">Fitness Trainer</small>
+    <h3>Vishal Choudhary</h3>
+    <div class="ccv2-tags">
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Fitness training</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Strength</span>
+      <span style="border-color:rgba(255,255,255,0.2);color:var(--white)">Personal training</span>
+    </div>
+    <div class="ccv2-stats"><span class="ccv2-rating">&#9733; 4.8</span><span class="ccv2-clients">50 clients</span></div>
+    <div class="ccv2-actions">
+      <span class="ccv2-profile-btn" style="border-color:var(--white)">View Profile</span>
+      <a class="ccv2-book-btn" href="book-consultation.html">Book</a>
+    </div>
+  </div>
+</article>
+      </div>
+      </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="cta-strip">
+      <div class="page-shell">
+      <div>
+        <h2>Ready to find your coach?</h2>
+        <p>Book a free consultation and meet the right expert for your goals</p>
+      </div>
+      <a class="primary-button" href="book-consultation.html">Book a free consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="fg-app-section reveal" style="padding-bottom:0">
+    <div class="page-shell" style="text-align:center">
+      <h2 style="font-size:1.6rem;margin-bottom:6px">Download the <em>App</em></h2>
+      <p style="color:var(--muted);margin-bottom:24px">Track workouts, book sessions, and stay connected — right from your phone.</p>
+      <div class="fg-app-stores">
+        <a class="fg-app-store-link" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+          <span class="fg-store-label">
+            <small>GET IT ON</small>
+            Google Play
+          </span>
+        </a>
+        <a class="fg-app-store-link" href="https://apps.apple.com/us/app/fitness-gurukul/id6771451272" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          <span class="fg-store-label">
+            <small>DOWNLOAD ON</small>
+            App Store
+          </span>
+        </a>
+      </div>
+      <div class="footer-news-social" style="justify-content:center;margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06)">
+        <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="site-footer footer-news">
+    <div class="footer-news-inner">
+
+      <div class="footer-news-proof">
+        <div class="footer-news-proof-item"><strong>50+</strong><span>Events</span></div>
+        <div class="footer-news-proof-item"><strong>10K+</strong><span>Participants</span></div>
+        <div class="footer-news-proof-item"><strong>13</strong><span>Years</span></div>
+      </div>
+      <div class="footer-news-main">
+        <div class="footer-news-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/fitness-gurukul-logo.png" alt="Fitness Gurukul" />
+            <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+          </a>
+          <p class="footer-news-tagline">Personal training, made personal. Hyderabad's trusted fitness coaching since 2013.</p>
+          <div class="footer-news-contact">
+            <a href="tel:+917207113310">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 72071 13310
+            </a>
+            <a href="mailto:contact@fitnessgurukul.co.in">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contact@fitnessgurukul.co.in
+            </a>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Manikonda, Hyderabad
+            </span>
+          </div>
+        </div>
+        <div class="footer-news-links">
+          <div class="footer-news-col">
+            <h4>Discover</h4>
+            <nav>
+              <a href="about.html">About Us</a>
+              <a href="coaches.html">Our Coaches</a>
+              <a href="testimonials.html">Testimonials</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Tools</h4>
+            <nav>
+              <a href="tools.html">BMI Calculator</a>
+              <a href="tools.html">BMR Calculator</a>
+              <a href="tools.html">Body Fat Calculator</a>
+              <a href="tools.html">Macro Calculator</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Support</h4>
+            <nav>
+              <a href="contact.html">Contact Us</a>
+              <a href="about.html">FAQ</a>
+              <a href="book-consultation.html">Book a Call</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer-news-bottom">
+        <p class="footer-news-copy">&copy; 2026 Fitness Gurukul. All rights reserved.</p>
+        <div class="footer-news-social">
+          <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Coach Calendar Overlay -->
+  <div class="coach-cal-overlay" id="coachCalOverlay">
+    <div class="coach-cal-modal">
+      <button class="coach-cal-close" id="coachCalClose">&times;</button>
+      <div class="coach-cal-header">
+        <div class="coach-cal-avatar"><img id="calCoachImg" src="" alt="" /></div>
+        <div class="coach-cal-info">
+          <h2 id="calCoachName"></h2>
+          <p class="coach-cal-role" id="calCoachRole"></p>
+          <div class="coach-cal-badges" id="calCoachBadges"></div>
+        </div>
+      </div>
+      <div class="coach-cal-videos">
+        <div class="coach-cal-video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="coach-cal-video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="coach-cal-video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <h3 class="coach-cal-title">June 2026 — Class Schedule</h3>
+      <div class="coach-cal-grid-wrap">
+        <table class="coach-cal-grid">
+          <thead>
+            <tr><th></th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+          </thead>
+          <tbody id="calGridBody">
+            <!-- filled by JS -->
+          </tbody>
+        </table>
+      </div>
+      <div class="coach-cal-footer">
+        <a href="book-consultation.html">Book a Session</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer injected by JS -->
+</body>
+</html>
+
+

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Fitness Gurukul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="header-left">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+        <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="coaches.html">Coaches</a>
+      <a href="events.html">Events</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="tools.html">Tools</a>
+    </nav>
+        <a class="header-play-btn" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+      <span>Get the App</span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="assets/fitness-gurukul-logo.png" alt="" /></span>
+      <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="coaches.html">Coaches</a>
+  <a href="events.html">Events</a>
+    <a href="testimonials.html">Testimonials</a>
+  <a href="tools.html">Tools</a>
+  </nav>
+
+  <main>
+    <section class="hero-fittr hero-split">
+      <div class="hero-fittr-content hero-split-inner">
+        <div class="hero-split-left">
+          <span class="hero-fittr-badge">Coaching Plans</span>
+          <h1 class="hero-fittr-headline">Invest in <em>Yourself</em></h1>
+          <p class="hero-fittr-sub">From 1-on-1 coaching to elite transformation — every plan is backed by science, personalized to you, and built for real results.</p>
+          <div class="hero-split-actions">
+            <a class="primary-button" href="#plans">View All Plans</a>
+            <a class="ghost-button" href="contact.html">Talk to an Expert</a>
+          </div>
+        </div>
+        <div class="hero-split-right">
+          <div class="hero-plan-card">
+            <span class="hero-plan-card-tag">Most Popular</span>
+            <div class="hero-plan-card-body">
+            <h3 class="hero-plan-card-name">Fitness Gurukul Core</h3>
+            <p class="hero-plan-card-sub">Our Most Personalized Coaching Experience</p>
+            <p class="hero-plan-card-price"><span>₹5,999</span>/month</p>
+            <ul class="hero-plan-card-list">
+              <li><strong>1-on-1 dedicated coach</strong> <span>hyper-personalized workouts &amp; nutrition</span></li>
+              <li><strong>Custom Indian meal plan</strong> <span>macro targets, flexible dieting, no crash diets</span></li>
+              <li><strong>1 in-person PT session</strong> <span>per week at your doorstep</span></li>
+              <li><strong>Weekly video audit calls</strong> <span>biofeedback, measurements &amp; form review</span></li>
+              <li><strong>Daily in-app chat support</strong> <span>with 8-hour response window</span></li>
+              <li><strong>App check-in protocols</strong> <span>selfie + location attendance validation</span></li>
+            </ul>
+            <a class="primary-button hero-plan-card-cta" href="#plans">Get Started Now</a>
+            <p class="hero-plan-card-note">Less than your monthly coffee spend. One coach, one plan, real results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ecosystem-section">
+      <div class="page-shell">
+        <div class="ecosystem-header">
+          <span class="ecosystem-kicker">WHAT WE OFFER</span>
+          <h2>Programs Built for <em>Every Goal</em></h2>
+          <p>From strength and endurance to group wellness — every program is coached, tracked, and personalized.</p>
+        </div>
+        <div class="eco-filter-row">
+          <button class="eco-filter-btn active" data-level="all">All Levels</button>
+          <button class="eco-filter-btn" data-level="beginner">Beginner</button>
+          <button class="eco-filter-btn" data-level="intermediate">Intermediate</button>
+          <button class="eco-filter-btn" data-level="advanced">Advanced</button>
+        </div>
+        <div class="eco-scroll-wrap">
+          <div class="eco-scroll-track">
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/strength.png" alt="Strength Training" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Strength</span>
+              <h3>Strength Training</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Muscle gain, fat loss, maintenance phase, rehabilitation, general fitness, Hyrox, and Devil Circuit — coached programs for every goal.</p>
+              <a class="ecosystem-card-cta" href="#plans">View plans &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/CYCLING.JPG" alt="Cycling" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Cycling</span>
+              <h3>Cycling</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Structured plans for 5K, 10K, 25K, 50K, 100K rides — plus nutrition coaching and Hyrox-specific cycling training.</p>
+              <a class="ecosystem-card-cta" href="#plans">View plans &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/running.png" alt="Running" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Running</span>
+              <h3>Running</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Run plans, nutrition guidance, and Hyrox prep — from 5K beginners to endurance athletes chasing PRs.</p>
+              <a class="ecosystem-card-cta" href="#plans">Start running &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/yoga.jpg" alt="Yoga" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Mind &amp; Body</span>
+              <h3>Yoga &amp; Breathwork</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Hatha yoga, corporate sessions, and breath-led recovery for flexibility, focus, and stress relief.</p>
+              <a class="ecosystem-card-cta" href="coaches.html">Meet coaches &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/indian nutrtion.png" alt="Nutrition" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Nutrition</span>
+              <h3>Indian Nutrition</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Meal plans built for Indian kitchens — sustainable fat loss without crash diets or foreign ingredients.</p>
+              <a class="ecosystem-card-cta" href="tools.html">Calculate macros &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/community event.jpg" alt="Events" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Community</span>
+              <h3>Community &amp; Events</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span></div>
+              <p>Cycling club, obstacle courses, summer camps, community runs, and Sip &amp; Stretch — fitness that is social and fun.</p>
+              <a class="ecosystem-card-cta" href="events.html">Join the community &rarr;</a>
+            </div>
+            <!-- duplicate for seamless loop -->
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/strength.png" alt="Strength Training" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Strength</span>
+              <h3>Strength Training</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Muscle gain, fat loss, maintenance phase, rehabilitation, general fitness, Hyrox, and Devil Circuit — coached programs for every goal.</p>
+              <a class="ecosystem-card-cta" href="#plans">View plans &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/CYCLING.JPG" alt="Cycling" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Cycling</span>
+              <h3>Cycling</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Structured plans for 5K, 10K, 25K, 50K, 100K rides — plus nutrition coaching and Hyrox-specific cycling training.</p>
+              <a class="ecosystem-card-cta" href="#plans">View plans &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/running.png" alt="Running" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Running</span>
+              <h3>Running</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Run plans, nutrition guidance, and Hyrox prep — from 5K beginners to endurance athletes chasing PRs.</p>
+              <a class="ecosystem-card-cta" href="#plans">Start running &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/yoga.jpg" alt="Yoga" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Mind &amp; Body</span>
+              <h3>Yoga &amp; Breathwork</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Hatha yoga, corporate sessions, and breath-led recovery for flexibility, focus, and stress relief.</p>
+              <a class="ecosystem-card-cta" href="coaches.html">Meet coaches &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner intermediate advanced">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/indian nutrtion.png" alt="Nutrition" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Nutrition</span>
+              <h3>Indian Nutrition</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span><span class="eco-level-tag intermediate">Intermediate</span><span class="eco-level-tag advanced">Advanced</span></div>
+              <p>Meal plans built for Indian kitchens — sustainable fat loss without crash diets or foreign ingredients.</p>
+              <a class="ecosystem-card-cta" href="tools.html">Calculate macros &rarr;</a>
+            </div>
+            <div class="ecosystem-card" data-level="beginner">
+              <div class="ecosystem-card-img"><img src="INDEX/SERVICES/community event.jpg" alt="Events" loading="lazy" /></div>
+              <span class="ecosystem-card-badge">Community</span>
+              <h3>Community &amp; Events</h3>
+              <div class="eco-level-tags"><span class="eco-level-tag beginner">Beginner</span></div>
+              <p>Cycling club, obstacle courses, summer camps, community runs, and Sip &amp; Stretch — fitness that is social and fun.</p>
+              <a class="ecosystem-card-cta" href="events.html">Join the community &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-detail-section">
+      <div class="page-shell">
+        <div class="section-heading">
+          <h2>Each Service, <em>Up Close</em></h2>
+          <p>Click any card to see default workouts and tools inside.</p>
+        </div>
+
+        <div class="svc-hz-card" onclick="this.classList.toggle('active')">
+          <div class="svc-hz-body">
+            <span class="svc-hz-tag">Strength</span>
+            <h3>Strength Training</h3>
+            <p class="svc-hz-sub">Build muscle, burn fat, and move better with coached barbell, dumbbell, and bodyweight sessions.</p>
+            <div class="svc-hz-meta">
+              <span class="svc-hz-meta-item"><strong>6</strong> Default Workouts</span>
+              <span class="svc-hz-meta-item"><strong>5</strong> Tracking Tools</span>
+            </div>
+            <ul class="svc-hz-features">
+              <li>Barbell Squat 4x8</li>
+              <li>Bench Press 4x8</li>
+              <li>Romanian Deadlift 3x10</li>
+            </ul>
+            <button class="svc-hz-btn">View Workouts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <div class="svc-hz-img"><img src="INDEX/SERVICES/strength.png" alt="Strength Training" loading="lazy" /></div>
+          <div class="svc-hz-overlay" onclick="event.stopPropagation()">
+            <div class="svc-hz-overlay-head">
+              <h3>Strength Training</h3>
+              <button class="svc-hz-overlay-close" onclick="this.closest('.svc-hz-card').classList.remove('active')">&times;</button>
+            </div>
+            <div class="svc-hz-overlay-meta">
+              <div class="svc-hz-overlay-meta-item"><strong>Duration</strong><span>12 weeks</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Level</strong><span>All Levels</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Equipment</strong><span>Barbell, Dumbbells</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Goal</strong><span>Strength & Hypertrophy</span></div>
+            </div>
+            <div class="svc-hz-overlay-body">
+              <p class="svc-hz-overlay-desc">Build muscle, burn fat, and move better with coached barbell, dumbbell, and bodyweight sessions. Progressive overload with periodized programming for consistent results.</p>
+              <div class="svc-hz-overlay-grid">
+                <div class="svc-hz-overlay-col">
+                  <h4>Default Workouts</h4>
+                  <ul>
+                    <li>Barbell Squat 4x8</li>
+                    <li>Bench Press 4x8</li>
+                    <li>Romanian Deadlift 3x10</li>
+                    <li>Overhead Press 3x10</li>
+                    <li>Pull-ups 3xmax</li>
+                    <li>Plank 3x45s</li>
+                  </ul>
+                </div>
+                <div class="svc-hz-overlay-col">
+                  <h4>Tools &amp; Tracking</h4>
+                  <ul>
+                    <li>1RM progression tracker</li>
+                    <li>Rest timer (in-app)</li>
+                    <li>Form check video upload</li>
+                    <li>Volume &amp; load logger</li>
+                    <li>Deload week scheduler</li>
+                  </ul>
+                </div>
+              </div>
+              <table class="svc-hz-overlay-table">
+                <thead><tr><th>Day</th><th>Session</th><th>Duration</th></tr></thead>
+                <tbody>
+                  <tr><td>Monday</td><td>Upper Body Push</td><td>60 min</td></tr>
+                  <tr><td>Wednesday</td><td>Lower Body</td><td>60 min</td></tr>
+                  <tr><td>Friday</td><td>Upper Body Pull</td><td>60 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="svc-hz-overlay-footer">
+              <span>Included in all coaching plans</span>
+              <a href="#plans">View Plans</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-hz-card" onclick="this.classList.toggle('active')">
+          <div class="svc-hz-body">
+            <span class="svc-hz-tag">Running</span>
+            <h3>Running</h3>
+            <p class="svc-hz-sub">From Couch to 5K to marathon prep — periodized run plans, easy runs, tempo sessions, and long runs.</p>
+            <div class="svc-hz-meta">
+              <span class="svc-hz-meta-item"><strong>6</strong> Default Workouts</span>
+              <span class="svc-hz-meta-item"><strong>5</strong> Tracking Tools</span>
+            </div>
+            <ul class="svc-hz-features">
+              <li>Easy Run 30 min Zone 2</li>
+              <li>Tempo Run 20 min @ threshold</li>
+              <li>Interval 6x400m @ 5K pace</li>
+            </ul>
+            <button class="svc-hz-btn">View Workouts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <div class="svc-hz-img"><img src="INDEX/SERVICES/running.png" alt="Running" loading="lazy" /></div>
+          <div class="svc-hz-overlay" onclick="event.stopPropagation()">
+            <div class="svc-hz-overlay-head">
+              <h3>Running</h3>
+              <button class="svc-hz-overlay-close" onclick="this.closest('.svc-hz-card').classList.remove('active')">&times;</button>
+            </div>
+            <div class="svc-hz-overlay-meta">
+              <div class="svc-hz-overlay-meta-item"><strong>Duration</strong><span>10 weeks</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Level</strong><span>All Levels</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Equipment</strong><span>Running Shoes</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Goal</strong><span>Endurance & Speed</span></div>
+            </div>
+            <div class="svc-hz-overlay-body">
+              <p class="svc-hz-overlay-desc">Build aerobic base, increase pace, and run your best race with structured run plans. From easy recovery jogs to race-pace intervals, every session has a purpose.</p>
+              <div class="svc-hz-overlay-grid">
+                <div class="svc-hz-overlay-col">
+                  <h4>Default Workouts</h4>
+                  <ul>
+                    <li>Easy Run 30 min Zone 2</li>
+                    <li>Tempo Run 20 min @ threshold</li>
+                    <li>Interval 6x400m @ 5K pace</li>
+                    <li>Long Run 60-90 min easy</li>
+                    <li>Hill Repeats 8x60s</li>
+                    <li>Recovery Jog 20 min</li>
+                  </ul>
+                </div>
+                <div class="svc-hz-overlay-col">
+                  <h4>Tools &amp; Tracking</h4>
+                  <ul>
+                    <li>Weekly mileage logger</li>
+                    <li>Heart rate zone guide</li>
+                    <li>RPE-based pacing calculator</li>
+                    <li>Race-day nutrition planner</li>
+                    <li>Run-walk interval timer</li>
+                  </ul>
+                </div>
+              </div>
+              <table class="svc-hz-overlay-table">
+                <thead><tr><th>Day</th><th>Session</th><th>Duration</th></tr></thead>
+                <tbody>
+                  <tr><td>Monday</td><td>Easy Run Zone 2</td><td>30 min</td></tr>
+                  <tr><td>Wednesday</td><td>Tempo / Intervals</td><td>25 min</td></tr>
+                  <tr><td>Saturday</td><td>Long Run</td><td>60-90 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="svc-hz-overlay-footer">
+              <span>Included in all coaching plans</span>
+              <a href="#plans">View Plans</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-hz-card" onclick="this.classList.toggle('active')">
+          <div class="svc-hz-body">
+            <span class="svc-hz-tag">Cycling</span>
+            <h3>Cycling</h3>
+            <p class="svc-hz-sub">Indoor and outdoor ride plans — endurance base, sprint intervals, and Hyrox-specific cycling blocks.</p>
+            <div class="svc-hz-meta">
+              <span class="svc-hz-meta-item"><strong>6</strong> Default Workouts</span>
+              <span class="svc-hz-meta-item"><strong>5</strong> Tracking Tools</span>
+            </div>
+            <ul class="svc-hz-features">
+              <li>Endurance Ride 60 min Z2</li>
+              <li>Sweet Spot 3x10 min</li>
+              <li>Sprint Intervals 10x30s ON/OFF</li>
+            </ul>
+            <button class="svc-hz-btn">View Workouts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <div class="svc-hz-img"><img src="INDEX/SERVICES/CYCLING.JPG" alt="Cycling" loading="lazy" /></div>
+          <div class="svc-hz-overlay" onclick="event.stopPropagation()">
+            <div class="svc-hz-overlay-head">
+              <h3>Cycling</h3>
+              <button class="svc-hz-overlay-close" onclick="this.closest('.svc-hz-card').classList.remove('active')">&times;</button>
+            </div>
+            <div class="svc-hz-overlay-meta">
+              <div class="svc-hz-overlay-meta-item"><strong>Duration</strong><span>10 weeks</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Level</strong><span>All Levels</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Equipment</strong><span>Road / Indoor Bike</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Goal</strong><span>Power & Endurance</span></div>
+            </div>
+            <div class="svc-hz-overlay-body">
+              <p class="svc-hz-overlay-desc">Indoor and outdoor ride plans covering endurance base, sprint intervals, and Hyrox-specific cycling blocks. Structured power and heart rate zones for measurable progress.</p>
+              <div class="svc-hz-overlay-grid">
+                <div class="svc-hz-overlay-col">
+                  <h4>Default Workouts</h4>
+                  <ul>
+                    <li>Endurance Ride 60 min Z2</li>
+                    <li>Sweet Spot 3x10 min</li>
+                    <li>Sprint Intervals 10x30s ON/OFF</li>
+                    <li>Hill Climb 4x5 min</li>
+                    <li>Recovery Spin 30 min</li>
+                    <li>FTP Test 20 min</li>
+                  </ul>
+                </div>
+                <div class="svc-hz-overlay-col">
+                  <h4>Tools &amp; Tracking</h4>
+                  <ul>
+                    <li>FTP calculator</li>
+                    <li>Power zone chart</li>
+                    <li>Ride distance &amp; elevation log</li>
+                    <li>Cadence &amp; heart rate guide</li>
+                    <li>Hyrox bike split trainer</li>
+                  </ul>
+                </div>
+              </div>
+              <table class="svc-hz-overlay-table">
+                <thead><tr><th>Day</th><th>Session</th><th>Duration</th></tr></thead>
+                <tbody>
+                  <tr><td>Monday</td><td>Endurance Ride Z2</td><td>60 min</td></tr>
+                  <tr><td>Wednesday</td><td>Sweet Spot Intervals</td><td>45 min</td></tr>
+                  <tr><td>Saturday</td><td>Long Ride / Hill Climb</td><td>75 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="svc-hz-overlay-footer">
+              <span>Included in all coaching plans</span>
+              <a href="#plans">View Plans</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-hz-card" onclick="this.classList.toggle('active')">
+          <div class="svc-hz-body">
+            <span class="svc-hz-tag">Mind &amp; Body</span>
+            <h3>Yoga &amp; Breathwork</h3>
+            <p class="svc-hz-sub">Hatha flows, breathwork drills, and mobility sessions — flexibility, focus, and stress relief.</p>
+            <div class="svc-hz-meta">
+              <span class="svc-hz-meta-item"><strong>6</strong> Default Sessions</span>
+              <span class="svc-hz-meta-item"><strong>5</strong> Tracking Tools</span>
+            </div>
+            <ul class="svc-hz-features">
+              <li>Surya Namaskar Flow x12</li>
+              <li>Pranayama Box Breathing 5 min</li>
+              <li>Hip Opener Sequence 20 min</li>
+            </ul>
+            <button class="svc-hz-btn">View Workouts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <div class="svc-hz-img"><img src="INDEX/SERVICES/yoga.jpg" alt="Yoga" loading="lazy" /></div>
+          <div class="svc-hz-overlay" onclick="event.stopPropagation()">
+            <div class="svc-hz-overlay-head">
+              <h3>Yoga &amp; Breathwork</h3>
+              <button class="svc-hz-overlay-close" onclick="this.closest('.svc-hz-card').classList.remove('active')">&times;</button>
+            </div>
+            <div class="svc-hz-overlay-meta">
+              <div class="svc-hz-overlay-meta-item"><strong>Duration</strong><span>Ongoing</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Level</strong><span>All Levels</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Style</strong><span>Hatha & Pranayama</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Goal</strong><span>Flexibility & Focus</span></div>
+            </div>
+            <div class="svc-hz-overlay-body">
+              <p class="svc-hz-overlay-desc">Hatha flows, breathwork drills, and mobility sessions designed to improve flexibility, sharpen focus, and relieve stress. Ideal as active recovery or standalone practice.</p>
+              <div class="svc-hz-overlay-grid">
+                <div class="svc-hz-overlay-col">
+                  <h4>Default Sessions</h4>
+                  <ul>
+                    <li>Surya Namaskar Flow x12</li>
+                    <li>Pranayama Box Breathing 5 min</li>
+                    <li>Hip Opener Sequence 20 min</li>
+                    <li>Shoulder Mobility Drill 10 min</li>
+                    <li>Nadi Shodhana 3 rounds</li>
+                    <li>Yoga Nidra 15 min</li>
+                  </ul>
+                </div>
+                <div class="svc-hz-overlay-col">
+                  <h4>Tools &amp; Tracking</h4>
+                  <ul>
+                    <li>Flexibility baseline test</li>
+                    <li>Breath hold timer</li>
+                    <li>Session streak tracker</li>
+                    <li>Stress score logger</li>
+                    <li>Corporate session planner</li>
+                  </ul>
+                </div>
+              </div>
+              <table class="svc-hz-overlay-table">
+                <thead><tr><th>Day</th><th>Session</th><th>Duration</th></tr></thead>
+                <tbody>
+                  <tr><td>Daily</td><td>Morning Flow + Pranayama</td><td>25 min</td></tr>
+                  <tr><td>Wed / Fri</td><td>Deep Stretch &amp; Mobility</td><td>30 min</td></tr>
+                  <tr><td>Sunday</td><td>Yoga Nidra &amp; Breathwork</td><td>20 min</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="svc-hz-overlay-footer">
+              <span>Included in all coaching plans</span>
+              <a href="coaches.html">Meet Coaches</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-hz-card" onclick="this.classList.toggle('active')">
+          <div class="svc-hz-body">
+            <span class="svc-hz-tag">Nutrition</span>
+            <h3>Indian Nutrition</h3>
+            <p class="svc-hz-sub">Macro-balanced Indian meal plans — roti, rice, dal, sabzi — sustainable fat loss without crash diets.</p>
+            <div class="svc-hz-meta">
+              <span class="svc-hz-meta-item"><strong>6</strong> Sample Meals</span>
+              <span class="svc-hz-meta-item"><strong>5</strong> Tracking Tools</span>
+            </div>
+            <ul class="svc-hz-features">
+              <li>Oats + paneer bhurji (Breakfast)</li>
+              <li>Rajma + brown rice (Lunch)</li>
+              <li>Makhana + buttermilk (Snack)</li>
+            </ul>
+            <button class="svc-hz-btn">View Plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <div class="svc-hz-img"><img src="INDEX/SERVICES/indian nutrtion.png" alt="Indian Nutrition" loading="lazy" /></div>
+          <div class="svc-hz-overlay" onclick="event.stopPropagation()">
+            <div class="svc-hz-overlay-head">
+              <h3>Indian Nutrition</h3>
+              <button class="svc-hz-overlay-close" onclick="this.closest('.svc-hz-card').classList.remove('active')">&times;</button>
+            </div>
+            <div class="svc-hz-overlay-meta">
+              <div class="svc-hz-overlay-meta-item"><strong>Duration</strong><span>Ongoing</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Approach</strong><span>Indian Diet</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Meals</strong><span>4-5 per day</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Goal</strong><span>Fat Loss & Muscle</span></div>
+            </div>
+            <div class="svc-hz-overlay-body">
+              <p class="svc-hz-overlay-desc">Macro-balanced Indian meal plans featuring roti, rice, dal, and sabzi — sustainable fat loss without crash diets. Customized to your food preferences and cooking style.</p>
+              <div class="svc-hz-overlay-grid">
+                <div class="svc-hz-overlay-col">
+                  <h4>Sample Daily Plan</h4>
+                  <ul>
+                    <li>Oats + paneer bhurji (Breakfast)</li>
+                    <li>Rajma + brown rice (Lunch)</li>
+                    <li>Makhana + buttermilk (Snack)</li>
+                    <li>Dal + 2 roti + sabzi (Dinner)</li>
+                    <li>1 scoop whey post-workout</li>
+                    <li>3L water target daily</li>
+                  </ul>
+                </div>
+                <div class="svc-hz-overlay-col">
+                  <h4>Tools &amp; Tracking</h4>
+                  <ul>
+                    <li>Macro calculator (BMR/TDEE)</li>
+                    <li>Meal photo logger</li>
+                    <li>Water intake tracker</li>
+                    <li>Grocery list generator</li>
+                    <li>Weekly meal prep planner</li>
+                  </ul>
+                </div>
+              </div>
+              <table class="svc-hz-overlay-table">
+                <thead><tr><th>Meal</th><th>Example</th><th>Timing</th></tr></thead>
+                <tbody>
+                  <tr><td>Breakfast</td><td>Oats + paneer bhurji</td><td>7:00 AM</td></tr>
+                  <tr><td>Lunch</td><td>Rajma + brown rice</td><td>12:30 PM</td></tr>
+                  <tr><td>Snack</td><td>Makhana + buttermilk</td><td>4:00 PM</td></tr>
+                  <tr><td>Dinner</td><td>Dal + roti + sabzi</td><td>7:30 PM</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="svc-hz-overlay-footer">
+              <span>Included in all coaching plans</span>
+              <a href="tools.html">Calculate Macros</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-hz-card" onclick="this.classList.toggle('active')">
+          <div class="svc-hz-body">
+            <span class="svc-hz-tag">Community</span>
+            <h3>Community &amp; Events</h3>
+            <p class="svc-hz-sub">Cycling clubs, obstacle courses, summer camps, community runs, and Sip &amp; Stretch meetups.</p>
+            <div class="svc-hz-meta">
+              <span class="svc-hz-meta-item"><strong>6</strong> Event Types</span>
+              <span class="svc-hz-meta-item"><strong>5</strong> Features</span>
+            </div>
+            <ul class="svc-hz-features">
+              <li>FG Community 5K Run</li>
+              <li>Cycling Club Weekend Ride</li>
+              <li>Hyrox Trial Day</li>
+            </ul>
+            <button class="svc-hz-btn">View Events <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <div class="svc-hz-img"><img src="INDEX/SERVICES/community event.jpg" alt="Community Events" loading="lazy" /></div>
+          <div class="svc-hz-overlay" onclick="event.stopPropagation()">
+            <div class="svc-hz-overlay-head">
+              <h3>Community &amp; Events</h3>
+              <button class="svc-hz-overlay-close" onclick="this.closest('.svc-hz-card').classList.remove('active')">&times;</button>
+            </div>
+            <div class="svc-hz-overlay-meta">
+              <div class="svc-hz-overlay-meta-item"><strong>Frequency</strong><span>Monthly</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Level</strong><span>All Levels</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Types</strong><span>Runs, Rides, Camps</span></div>
+              <div class="svc-hz-overlay-meta-item"><strong>Goal</strong><span>Fitness & Fun</span></div>
+            </div>
+            <div class="svc-hz-overlay-body">
+              <p class="svc-hz-overlay-desc">Cycling clubs, obstacle courses, summer camps, community runs, and Sip &amp; Stretch meetups. Build connections while challenging yourself in a supportive environment.</p>
+              <div class="svc-hz-overlay-grid">
+                <div class="svc-hz-overlay-col">
+                  <h4>Event Types</h4>
+                  <ul>
+                    <li>FG Community 5K Run</li>
+                    <li>Cycling Club Weekend Ride</li>
+                    <li>Hyrox Trial Day</li>
+                    <li>Kids Summer Camp</li>
+                    <li>Sip &amp; Stretch Social</li>
+                    <li>Corporate Wellness Day</li>
+                  </ul>
+                </div>
+                <div class="svc-hz-overlay-col">
+                  <h4>Tools &amp; Features</h4>
+                  <ul>
+                    <li>Event RSVP &amp; calendar</li>
+                    <li>Team leaderboard</li>
+                    <li>Photo gallery per event</li>
+                    <li>Referral rewards tracker</li>
+                    <li>Community chat channel</li>
+                  </ul>
+                </div>
+              </div>
+              <table class="svc-hz-overlay-table">
+                <thead><tr><th>Event</th><th>Date</th><th>Location</th></tr></thead>
+                <tbody>
+                  <tr><td>FG Community 5K Run</td><td>Monthly, 1st Sunday</td><td>City Park</td></tr>
+                  <tr><td>Cycling Club Ride</td><td>Every Saturday</td><td>Starts at FG Gym</td></tr>
+                  <tr><td>Sip &amp; Stretch</td><td>Last Friday</td><td>FG Studio</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="svc-hz-overlay-footer">
+              <span>Open to all fitness levels</span>
+              <a href="events.html">Join Community</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-shell">
+      <div class="page-shell">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Watch &amp; Learn</span>
+          <h2>Program <span class="ts-glow">Videos</span></h2>
+          <p>See what each program looks like — guided sessions, real techniques, and what you can expect from FG coaching.</p>
+        </div>
+      </div>
+      <div class="svc-video-grid">
+        <div class="svc-video-card">
+          <div class="svc-video-wrap">
+            <video controls preload="metadata">
+              <source src="services/VIDEOS/weight%20loss.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="svc-video-body">
+            <span class="svc-video-tag">Weight Loss Program</span>
+            <h3>Science-Backed Weight Loss</h3>
+            <p>Research consistently shows that people who work with personal trainers lose more weight, build more muscle, and stick to their programs longer than those who train alone. Our weight loss program combines strength training, conditioning, and personalized nutrition to create a sustainable calorie deficit while preserving lean muscle mass. Each session is tailored to your body type, metabolism, and lifestyle — ensuring results that last.</p>
+            <div class="svc-video-stats">
+              <span>Custom macro plans</span>
+              <span>Strength + cardio</span>
+              <span>Weekly check-ins</span>
+            </div>
+          </div>
+        </div>
+        <div class="svc-video-card">
+          <div class="svc-video-wrap">
+            <video controls preload="metadata">
+              <source src="services/VIDEOS/yoga.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="svc-video-body">
+            <span class="svc-video-tag">Yoga &amp; Mindfulness</span>
+            <h3>The Science of Yoga</h3>
+            <p>Research from Harvard and NIH shows regular yoga practice improves flexibility, strengthens the cardiovascular system, reduces stress hormones like cortisol, and enhances cognitive function. Our yoga sessions blend Hatha, Vinyasa, and breathwork to build both physical resilience and mental clarity. Whether you're a beginner or advanced, each class meets you where you are.</p>
+            <div class="svc-video-stats">
+              <span>Flexibility &amp; balance</span>
+              <span>Stress reduction</span>
+              <span>Mind-body connection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="plans-bw-section" id="plans">
+      <div class="page-shell">
+      <div class="plans-bw-header">
+        <h2>Choose Your Plan</h2>
+        <p>Every plan includes a dedicated coach, personalized nutrition, and the Fitness Gurukul app. Pick the level of support that fits your life.</p>
+      </div>
+
+      <div class="plans-hz-card" onclick="openPlan('core')">
+        <div class="plans-hz-card-body">
+          <span class="plans-hz-tag highlight">Most Popular</span>
+          <h3>Fitness Gurukul Core</h3>
+          <div class="plans-hz-sub">Our Most Personalized Coaching Experience</div>
+          <div class="plans-hz-row">
+            <div class="plans-hz-price"><span class="amt">₹5,999</span><span class="period">/month</span></div>
+            <div class="plans-hz-sessions">1 on 1 Sessions · 1 per Week</div>
+          </div>
+          <ul class="plans-hz-features">
+            <li>Dedicated fitness &amp; nutrition coach</li>
+            <li>Custom workout &amp; Indian meal plan</li>
+            <li>1 in-person PT session per week</li>
+          </ul>
+          <button class="plans-hz-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+        <div class="plans-hz-card-img"><img src="services/fg%20core.png" alt="Fitness Gurukul Core" loading="lazy" /></div>
+      </div>
+
+      <div class="plans-hz-card" onclick="openPlan('signature')">
+        <div class="plans-hz-card-body">
+          <span class="plans-hz-tag">Best Value</span>
+          <h3>Fitness Gurukul Signature</h3>
+          <div class="plans-hz-sub">Build Strength. Correct Movement. Transform Physique.</div>
+          <div class="plans-hz-row">
+            <div class="plans-hz-price"><span class="amt">₹15,999</span><span class="period">/month</span></div>
+            <div class="plans-hz-sessions">1 on 1 Sessions · 5 per Week</div>
+          </div>
+          <ul class="plans-hz-features">
+            <li>Everything in Core plus daily PT</li>
+            <li>Advanced progress tracking</li>
+            <li>Priority coach availability</li>
+          </ul>
+          <button class="plans-hz-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+        <div class="plans-hz-card-img"><img src="services/fg%20signature.png" alt="Fitness Gurukul Signature" loading="lazy" /></div>
+      </div>
+
+      <div class="plans-hz-card" onclick="openPlan('prime')">
+        <div class="plans-hz-card-body">
+          <h3>Fitness Gurukul Prime</h3>
+          <div class="plans-hz-sub">Complete Fitness &amp; Nutrition Coaching</div>
+          <div class="plans-hz-row">
+            <div class="plans-hz-price"><span class="amt">₹9,500</span><span class="period">/month</span></div>
+            <div class="plans-hz-sessions">1 on 1 Sessions · 3 per Week</div>
+          </div>
+          <ul class="plans-hz-features">
+            <li>3 in-person PT sessions per week</li>
+            <li>Monthly progress reviews</li>
+            <li>Full nutritional coaching</li>
+          </ul>
+          <button class="plans-hz-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+        <div class="plans-hz-card-img"><img src="services/fg%20prime.png" alt="Fitness Gurukul Prime" loading="lazy" /></div>
+      </div>
+
+      <div class="plans-hz-card" onclick="openPlan('endurance')">
+        <div class="plans-hz-card-body">
+          <h3>Fitness Gurukul Endurance</h3>
+          <div class="plans-hz-sub">Coaching, Nutrition, Strength &amp; Race Strategy</div>
+          <div class="plans-hz-row">
+            <div class="plans-hz-price"><span class="amt">₹1,199</span><span class="period">/month</span></div>
+            <div class="plans-hz-sessions">Running · Dedicated Coach</div>
+          </div>
+          <ul class="plans-hz-features">
+            <li>Periodized running program</li>
+            <li>Runner-specific S&amp;C</li>
+            <li>Race-day nutrition &amp; pacing plan</li>
+          </ul>
+          <button class="plans-hz-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+        <div class="plans-hz-card-img"><img src="services/fg%20endurance.png" alt="Fitness Gurukul Endurance" loading="lazy" /></div>
+      </div>
+
+      <div class="plans-hz-card" onclick="openPlan('forge')">
+        <div class="plans-hz-card-body">
+          <h3>Fitness Gurukul Forge</h3>
+          <div class="plans-hz-sub">Hyrox / OCR Preparation</div>
+          <div class="plans-hz-row">
+            <div class="plans-hz-price"><span class="amt">₹999</span><span class="period">/month</span></div>
+            <div class="plans-hz-sessions">S&C · Functional Racing</div>
+          </div>
+          <ul class="plans-hz-features">
+            <li>Compounded S&amp;C for racing</li>
+            <li>Rowing, SkiErg, sleds &amp; wall balls</li>
+            <li>Compromised running stamina work</li>
+          </ul>
+          <button class="plans-hz-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+        <div class="plans-hz-card-img"><img src="services/fg%20hyrox.png" alt="Fitness Gurukul Forge" loading="lazy" /></div>
+      </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="page-shell">
+      <div>
+        <h2>Not sure which plan is right?</h2>
+        <p>Book a free consultation and we'll help you find the perfect fit.</p>
+      </div>
+      <a class="primary-button" href="book-consultation.html">Book a free consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="plan-overlay-bw" id="planOverlay">
+    <button class="plan-overlay-close" onclick="closePlan()">&times;</button>
+    <div class="plan-overlay-bw-inner" id="planOverlayInner">
+      <div class="plan-overlay-text" id="planText"></div>
+      <div class="plan-overlay-visual" id="planVisual"></div>
+    </div>
+    <div class="plan-overlay-how">
+      <h3>How It Works</h3>
+      <div class="plan-overlay-how-grid">
+        <div class="plan-how-step"><div class="step-num">Step 01</div><h4>App &amp; Assessment Unlock</h4><p>Instant access to the Fitness Gurukul app. Complete a digital intake form — fitness level, lifestyle, medical history, and goals.</p></div>
+        <div class="plan-how-step"><div class="step-num">Step 02</div><h4>Trainer Allocation</h4><p>Based on your location and preferred slots, a dedicated personal trainer is assigned and connects via in-app chat within hours.</p></div>
+        <div class="plan-how-step"><div class="step-num">Step 03</div><h4>Physical Assessment</h4><p>The first in-person session is a comprehensive audit — baseline strength, posture, mobility limits. Ensures your routines are safe and effective.</p></div>
+        <div class="plan-how-step"><div class="step-num">Step 04</div><h4>Macro &amp; Workout Sync</h4><p>Within 24 hours your 1-month digital blueprint is live. The app shows PT days, recovery days, custom routines, and Indian nutrition macro targets.</p></div>
+        <div class="plan-how-step"><div class="step-num">Step 05</div><h4>Attendance Check-Ins</h4><p>On training days, validate your session using in-app location tagging and selfie check-in. This ensures transparency and fierce accountability.</p></div>
+        <div class="plan-how-step"><div class="step-num">Step 06</div><h4>Daily Tracking &amp; Review</h4><p>Log meals, water, and steps daily. Your coach monitors in real time. End of month, a full review of weight, measurements, and consistency sets up your next cycle.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="fg-app-section reveal" style="padding-bottom:0">
+    <div class="page-shell" style="text-align:center">
+      <h2 style="font-size:1.6rem;margin-bottom:6px">Download the <em>App</em></h2>
+      <p style="color:var(--muted);margin-bottom:24px">Track workouts, book sessions, and stay connected — right from your phone.</p>
+      <div class="fg-app-stores">
+        <a class="fg-app-store-link" href="https://play.google.com/store/apps/details?id=com.fitnessgurukul.app" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5v17l14-8.5z"/></svg>
+          <span class="fg-store-label">
+            <small>GET IT ON</small>
+            Google Play
+          </span>
+        </a>
+        <a class="fg-app-store-link" href="https://apps.apple.com/us/app/fitness-gurukul/id6771451272" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="2" width="16" height="20" rx="3"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+          <span class="fg-store-label">
+            <small>DOWNLOAD ON</small>
+            App Store
+          </span>
+        </a>
+      </div>
+      <div class="footer-news-social" style="justify-content:center;margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.06)">
+        <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <footer class="site-footer footer-news">
+    <div class="footer-news-inner">
+      <div class="footer-news-proof">
+        <div class="footer-news-proof-item"><strong>50+</strong><span>Events</span></div>
+        <div class="footer-news-proof-item"><strong>10K+</strong><span>Participants</span></div>
+        <div class="footer-news-proof-item"><strong>13</strong><span>Years</span></div>
+      </div>
+      <div class="footer-news-main">
+        <div class="footer-news-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/fitness-gurukul-logo.png" alt="Fitness Gurukul" />
+            <span class="brand-text"><strong>Fitness</strong><span>Gurukul</span></span>
+          </a>
+          <p class="footer-news-tagline">Personal training, made personal. Hyderabad's trusted fitness coaching since 2013.</p>
+          <div class="footer-news-contact">
+            <a href="tel:+917207113310">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 72071 13310
+            </a>
+            <a href="mailto:contact@fitnessgurukul.co.in">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contact@fitnessgurukul.co.in
+            </a>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Manikonda, Hyderabad
+            </span>
+          </div>
+        </div>
+        <div class="footer-news-links">
+          <div class="footer-news-col">
+            <h4>Discover</h4>
+            <nav>
+              <a href="about.html">About Us</a>
+              <a href="coaches.html">Our Coaches</a>
+              <a href="testimonials.html">Testimonials</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Tools</h4>
+            <nav>
+              <a href="tools.html">BMI Calculator</a>
+              <a href="tools.html">BMR Calculator</a>
+              <a href="tools.html">Body Fat Calculator</a>
+              <a href="tools.html">Macro Calculator</a>
+            </nav>
+          </div>
+          <div class="footer-news-col">
+            <h4>Support</h4>
+            <nav>
+              <a href="contact.html">Contact Us</a>
+              <a href="about.html">FAQ</a>
+              <a href="book-consultation.html">Book a Call</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer-news-bottom">
+        <p class="footer-news-copy">&copy; 2026 Fitness Gurukul. All rights reserved.</p>
+        <div class="footer-news-social">
+          <a href="https://www.instagram.com/fitnessgurukulofficial/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/fitnessgurukul7/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCLt2Qs1MeV_uf_xMJ7AaPlA" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+var planData = {
+  core: {
+    name: 'Fitness Gurukul Core',
+    sub: 'Our Most Personalized Coaching Experience',
+    tiers: [
+      { label: 'Monthly', price: '₹5,999', period: '/month' },
+      { label: 'Quarterly', price: '₹15,999', period: '/quarter' },
+      { label: '6 Monthly', price: '₹29,999', period: '/6 months' },
+      { label: 'Yearly', price: '₹51,000', period: '/year' }
+    ],
+    sessions: '1 on 1 · 1 per Week',
+    desc: 'Your dedicated coach builds hyper-personalized gym or home workouts with progressive overload tracking in-app. Every meal is covered — a tailored Indian nutrition plan with real macro/calorie targets, flexible dieting, no crash diets.',
+    includes: [
+      'Custom workout plan with progressive overload',
+      'Tailored Indian nutrition plan (macro targets)',
+      'Weekly video audit calls',
+      'Daily in-app chat support (8 hr window)',
+      '1 in-person PT session per week at your doorstep',
+      'In-app check-in protocols (selfie + location)',
+      'Posture, mobility & structural assessment'
+    ],
+    img: 'services/fg core.png'
+  },
+  signature: {
+    name: 'Fitness Gurukul Signature',
+    sub: 'Build Strength. Correct Movement. Transform Physique.',
+    bestValue: true,
+    tiers: [
+      { label: 'Monthly', price: '₹15,999', period: '/month' }
+    ],
+    sessions: '1 on 1 · 5 per Week',
+    desc: 'The most intensive coaching we offer. Daily in-person sessions, maximum accountability, and advanced tracking for those who want nothing less than a complete physical transformation.',
+    includes: [
+      'Everything in Core',
+      '5 in-person PT sessions per week at your doorstep',
+      'Advanced progress tracking & body composition analysis',
+      'Priority coach availability',
+      'Extended chat support window'
+    ],
+    img: 'services/fg signature.png'
+  },
+  prime: {
+    name: 'Fitness Gurukul Prime',
+    sub: 'Complete Fitness & Nutrition Coaching',
+    tiers: [
+      { label: 'Monthly', price: '₹9,500', period: '/month' },
+      { label: 'Quarterly', price: '₹26,999', period: '/quarter' },
+      { label: '6 Monthly', price: '₹51,999', period: '/6 months' }
+    ],
+    sessions: '1 on 1 · 3 per Week',
+    desc: 'The sweet spot — three in-person sessions per week with full nutritional coaching and daily check-ins. Enough frequency for serious results while keeping a sustainable schedule.',
+    includes: [
+      'Everything in Core',
+      '3 in-person PT sessions per week at your doorstep',
+      'Detailed monthly progress reviews',
+      'Priority scheduling'
+    ],
+    img: 'services/fg prime.png'
+  },
+  endurance: {
+    name: 'Fitness Gurukul Endurance',
+    sub: 'Coaching, Nutrition, Strength & Race Strategy',
+    tiers: [
+      { label: 'Monthly', price: '₹1,199', period: '/month' }
+    ],
+    sessions: 'Running · Dedicated Coach',
+    desc: 'Periodized running program for beginners to advanced racers. Track intervals, tempo runs, long slow distance — synced to the app with runner-specific S&C and race-day execution planning.',
+    includes: [
+      'Dedicated running coach',
+      'Periodized running program (app-synced)',
+      'Runner-specific S&C (injury prevention, core, hips)',
+      'Endurance nutrition & race-week carb-loading plan',
+      'Pacing strategy & race-day execution plan',
+      'Weekly video form reviews'
+    ],
+    img: 'services/fg endurance.png'
+  },
+  forge: {
+    name: 'Fitness Gurukul Forge',
+    sub: 'Hyrox / OCR Preparation',
+    tiers: [
+      { label: 'Monthly', price: '₹999', period: '/month' }
+    ],
+    sessions: 'S&C · Functional Racing',
+    desc: 'Compounded S&C for functional fitness racing — rowing, SkiErg, sled pushes, wall balls, agility, grip strength, and compromised running stamina. Built for athletes who race.',
+    includes: [
+      'Dedicated S&C coach',
+      'Compounded S&C — rowing, SkiErg, sled pushes, wall balls',
+      'Agility, grip & explosive power drills',
+      'Compromised running stamina workouts',
+      'Weekly video form reviews'
+    ],
+    img: 'services/fg hyrox.png'
+  },
+  elite: {
+    name: 'Virtual 1:1 Elite Transformation',
+    sub: 'Weight Loss · Lean Muscle · Lifestyle Overhaul',
+    tiers: [
+      { label: 'Monthly', price: '₹1,999', period: '/month' },
+      { label: 'Quarterly', price: '₹4,499', period: '/quarter' },
+      { label: '6 Monthly', price: '₹7,999', period: '/6 months' },
+      { label: 'Yearly', price: '₹11,999', period: '/year' }
+    ],
+    sessions: 'Online · Digital Coaching',
+    desc: 'Fully remote — your dedicated coach builds custom workouts and nutrition plans, reviews your progress weekly on video calls, and supports you daily in-app. No in-person required.',
+    includes: [
+      'Dedicated fitness & nutrition coach',
+      'Custom workout plan (gym or home)',
+      'Tailored Indian nutrition plan (flexible dieting)',
+      'Weekly video review calls',
+      'Daily in-app chat support (8 hr window)',
+      'In-app progress tracking'
+    ],
+    img: 'services/fg core.png'
+  }
+};
+
+function openPlan(id) {
+  var d = planData[id];
+  var badge = d.bestValue ? '<div class="overlay-best-value">Best Value</div>' : '';
+  var text = badge + '<h2>' + d.name + '</h2><div class="plan-overlay-sub">' + d.sub + '</div>';
+  text += '<div class="plan-overlay-tiers">';
+  d.tiers.forEach(function(t) {
+    text += '<div class="plan-tier-bw"><div class="tier-name">' + t.label + '</div><div class="tier-price">' + t.price + ' <small>' + t.period + '</small></div></div>';
+  });
+  text += '</div>';
+  text += '<div class="plan-overlay-sessions">' + d.sessions + '</div>';
+  text += '<div class="plan-overlay-desc">' + d.desc + '</div>';
+  text += '<div class="plan-overlay-section"><h3>What\'s Included</h3><ul class="plan-overlay-list">';
+  d.includes.forEach(function(i) { text += '<li>' + i + '</li>'; });
+  text += '</ul></div>';
+  text += '<a class="plan-overlay-cta" href="contact.html">Get Started <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>';
+
+  var visual = '<img src="' + d.img + '" alt="' + d.name + '" loading="lazy" />';
+  visual += '<div class="plan-overlay-visual-cap"><span>' + d.name + '</span></div>';
+
+  document.getElementById('planText').innerHTML = text;
+  document.getElementById('planVisual').innerHTML = visual;
+  document.getElementById('planOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePlan() {
+  document.getElementById('planOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('planOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closePlan();
+});
+
+document.querySelectorAll('.svc-hz-card').forEach(function(card) {
+  card.addEventListener('click', function(e) {
+    if (e.target.closest('.svc-hz-overlay-close')) return;
+    if (this.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  });
+  var closeBtn = card.querySelector('.svc-hz-overlay-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      card.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.svc-hz-card.active').forEach(function(card) {
+      card.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>
