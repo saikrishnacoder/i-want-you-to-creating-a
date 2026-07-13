@@ -2359,7 +2359,7 @@ function injectSiteChatbot() {
         chatEngine = "openai";
         status.textContent = "AI assistant online";
       } else {
-        status.textContent = usesLocalBackend ? "AI setup needed" : "Assistant online";
+        status.textContent = "Assistant online";
       }
       renderSuggestions(chatSuggestions);
     } catch (error) {
@@ -2385,7 +2385,7 @@ function injectSiteChatbot() {
         chatEngine = "openai";
         status.textContent = "AI assistant online";
       } else {
-        status.textContent = "AI setup needed";
+        status.textContent = "Assistant online";
       }
     } catch (error) {
       status.textContent = "Assistant online";
@@ -2394,7 +2394,7 @@ function injectSiteChatbot() {
   }
 
   setOpen(false);
-  appendMessage("assistant", "Hi! Ask me about your goal, budget, schedule, or plans like Core, Prime, Signature, Endurance, Forge, and Elite. When the server has an OpenAI key, I can answer as a full AI assistant; otherwise I use website plan facts.");
+  appendMessage("assistant", "Hi! Ask me about your goal, budget, schedule, or plans like Core, Prime, Signature, Endurance, Forge, and Elite.");
   renderSuggestions(chatSuggestions);
   loadChatStatus();
 
