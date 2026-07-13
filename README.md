@@ -68,10 +68,23 @@ http://127.0.0.1:8000/api/admin-data
 
 Static hosting cannot run Python or SQLite, so static forms save demo records in the browser only.
 
+## AI chatbot
+
+The chatbot uses the server-side `/api/chat` endpoint. For real AI answers, create a `.env` file from `.env.example` and add your OpenAI API key:
+
+```text
+OPENAI_API_KEY=sk-your-key
+OPENAI_MODEL=gpt-5.6
+```
+
+Then restart the server with `python server.py`. Without `OPENAI_API_KEY`, the chat widget still answers from website plan facts, but it runs in local fallback mode.
+
 ## API endpoints
 
 - `GET /api/health`
 - `GET /api/content`
+- `GET /api/chat/status`
+- `POST /api/chat`
 - `POST /api/leads`
 - `GET /api/leads`
 - `POST /api/newsletter`

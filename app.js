@@ -2104,7 +2104,7 @@ function injectFooter() {
 }
 
 function injectWhatsAppFloat() {
-  if (has(".wa-float")) return;
+  if (has(".wa-float") || has(".fab-wa")) return;
   var link = document.createElement("a");
   link.className = "wa-float";
   link.href = "https://wa.me/917207113310";
@@ -2121,9 +2121,9 @@ function injectSiteChatbot() {
   var chatSessionId = "fg-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 8);
   var chatHistory = [];
   var chatSuggestions = [
-    "What programs do you offer?",
-    "How much does personal training cost?",
-    "Do you offer doorstep coaching?",
+    "Which plan is best for weight loss?",
+    "Compare Core, Prime and Signature",
+    "Do you have running or Hyrox plans?",
     "Which coach is best for yoga?"
   ];
   var chatBusy = false;
@@ -2226,17 +2226,73 @@ function injectSiteChatbot() {
     });
   }
 
+  function normalizedTokens(text) {
+    return String(text || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/)
+      .filter(function(token) { return token.length > 2; });
+  }
+
+  function planKeywordScore(plan, text) {
+    var haystack = [
+      plan.name,
+      plan.tag,
+      plan.category,
+      plan.summary,
+      plan.price,
+      plan.sessions,
+      (plan.points || []).join(" ")
+    ].join(" ").toLowerCase();
+    return normalizedTokens(text).reduce(function(score, token) {
+      return score + (haystack.includes(token) ? 1 : 0);
+    }, 0);
+  }
+
+  function findMatchingPlans(message) {
+    var text = String(message || "").toLowerCase();
+    var plans = (realData.services || []).slice();
+    var ranked = plans
+      .map(function(plan) {
+        var score = planKeywordScore(plan, text);
+        if (/(weight|fat|loss|slim|transform|muscle|body|lifestyle)/.test(text) && /elite|core|prime|signature/.test(plan.category)) score += 3;
+        if (/(home|doorstep|personal|offline|trainer|pt|in person|session)/.test(text) && /core|prime|signature/.test(plan.category)) score += 3;
+        if (/(run|running|marathon|race|endurance|5k|10k)/.test(text) && plan.category === "endurance") score += 6;
+        if (/(hyrox|ocr|obstacle|functional|forge)/.test(text) && plan.category === "forge") score += 6;
+        if (/(budget|cheap|low|affordable|online|virtual)/.test(text) && /elite|forge|endurance/.test(plan.category)) score += 3;
+        if (/(daily|intense|fast|maximum|premium|five|5)/.test(text) && plan.category === "signature") score += 5;
+        if (/(three|3|advanced|complete)/.test(text) && plan.category === "prime") score += 4;
+        if (/(one|1|weekly|starter|beginner|basic|core)/.test(text) && plan.category === "core") score += 4;
+        return { plan: plan, score: score };
+      })
+      .filter(function(item) { return item.score > 0; })
+      .sort(function(a, b) { return b.score - a.score; });
+    return (ranked.length ? ranked.map(function(item) { return item.plan; }) : plans).slice(0, 3);
+  }
+
+  function formatPlanReply(plans, intro) {
+    var lines = [intro || "Here are the best-fit Fitness Gurukul plans:"];
+    plans.slice(0, 3).forEach(function(plan) {
+      lines.push(plan.name + " - " + plan.price + ". " + plan.summary.replace(/&mdash;/g, "-"));
+    });
+    lines.push("For the exact fit, share your goal, schedule, and whether you prefer virtual or in-person training.");
+    return lines.join(" ");
+  }
+
   function localChatReply(message) {
     var text = String(message || "").trim().toLowerCase();
     if (!text) return "Ask me about training plans, coaches, pricing, events, or booking a free consultation.";
     if (/^(hi|hello|hey|namaste)\b/.test(text)) {
       return "Hi! I am the Fitness Gurukul assistant. I can help with programs, coach matching, pricing, events, and booking a free consultation in Hyderabad.";
     }
-    if (text.includes("doorstep") || text.includes("home")) {
-      return "Yes, we offer personalised doorstep coaching in Hyderabad for strength training, weight loss, body toning, and stress relief. Share your area and preferred time on the Contact page and the team will confirm availability.";
+    if (text.includes("compare") || text.includes("difference") || text.includes("core") || text.includes("prime") || text.includes("signature")) {
+      return "Core is 1 session/week from INR 5,999/mo for personalized coaching. Prime is 3 sessions/week from INR 9,500/mo for more hands-on fitness and nutrition support. Signature is 5 sessions/week at INR 15,999/mo for intensive transformation with in-person PT, nutrition, posture assessment, and app check-ins.";
     }
-    if (text.includes("price") || text.includes("cost") || text.includes("how much")) {
-      return "Pricing depends on the program. Personal training includes a free demo, weight-loss diet plans include a free demo week, and kids programs start from INR 3,000. Book a consultation for an exact quote.";
+    if (text.includes("plan") || text.includes("program") || text.includes("package") || text.includes("pricing") || text.includes("price") || text.includes("cost") || text.includes("weight") || text.includes("muscle") || text.includes("hyrox") || text.includes("running")) {
+      return formatPlanReply(findMatchingPlans(text));
+    }
+    if (text.includes("doorstep") || text.includes("home")) {
+      return formatPlanReply(findMatchingPlans("in person home doorstep core prime signature"), "Yes. For in-person or doorstep-style coaching, these are the closest plan fits:");
     }
     if (text.includes("yoga") || text.includes("coach")) {
       return "We have yoga specialists like Aditya Gururani, Kritika Chauhan, and Parul Danu, plus strength and sports coaches across 10+ experts. Tell me your goal and I can help narrow the match on the Coaches page.";
@@ -2303,7 +2359,7 @@ function injectSiteChatbot() {
         chatEngine = "openai";
         status.textContent = "AI assistant online";
       } else {
-        status.textContent = usesLocalBackend ? "Smart assistant online" : "Assistant online";
+        status.textContent = usesLocalBackend ? "AI setup needed" : "Assistant online";
       }
       renderSuggestions(chatSuggestions);
     } catch (error) {
@@ -2329,7 +2385,7 @@ function injectSiteChatbot() {
         chatEngine = "openai";
         status.textContent = "AI assistant online";
       } else {
-        status.textContent = "Smart assistant online";
+        status.textContent = "AI setup needed";
       }
     } catch (error) {
       status.textContent = "Assistant online";
@@ -2338,7 +2394,7 @@ function injectSiteChatbot() {
   }
 
   setOpen(false);
-  appendMessage("assistant", "Hi! I am the Fitness Gurukul AI assistant. Ask me about programs, coaches, pricing, events, or booking a free consultation.");
+  appendMessage("assistant", "Hi! Ask me about your goal, budget, schedule, or plans like Core, Prime, Signature, Endurance, Forge, and Elite. When the server has an OpenAI key, I can answer as a full AI assistant; otherwise I use website plan facts.");
   renderSuggestions(chatSuggestions);
   loadChatStatus();
 

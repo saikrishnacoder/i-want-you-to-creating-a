@@ -14,6 +14,22 @@ PUBLIC = ROOT
 DB_PATH = ROOT / "fitness_gurukul.sqlite3"
 DB_SCHEMA_READY = False
 
+def load_env_file():
+    env_path = ROOT / ".env"
+    if not env_path.exists():
+        return
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+load_env_file()
+
 CONTACT = {
     "phone": "08042781491",
     "whatsapp": "+917207113310",
@@ -35,6 +51,15 @@ SERVICES = [
     {"name": "Group Training", "tag": "Community", "category": "event", "summary": "Sports events, recreational activities, meet events, bootcamps. Group motivation.", "price": "Batch based", "accent": "blue", "points": ["Group sessions", "Sports events", "Bootcamps", "Community"]},
     {"name": "Corporate Services", "tag": "Office wellness", "category": "event", "summary": "Office yoga, fun activities, mini shows, games and sports for corporate teams.", "price": "Custom quote", "accent": "cyan", "points": ["Office yoga", "Team activities", "Games", "Event planning"]},
     {"name": "Fitness Gurukul Born Star Running Event", "tag": "Community run", "category": "event", "summary": "Community-focused running event. INR 900 - INR 1000. For beginners and regular runners.", "price": "INR 900", "accent": "red", "points": ["Community run", "Beginner friendly", "Race experience", "Finisher medal"]},
+]
+
+PLANS = [
+    {"name": "Fitness Gurukul Core", "tag": "1-on-1 Coaching", "category": "core", "summary": "Dedicated fitness and nutrition coach with hyper-personalized workout plans, tailored Indian nutrition, and weekly video check-ins.", "price": "From INR 5,999/month", "sessions": "1 session/week", "points": ["Dedicated coach", "Custom meal plan", "Video check-ins", "In-person PT", "App check-in"]},
+    {"name": "Fitness Gurukul Prime", "tag": "Advanced Coaching", "category": "prime", "summary": "Complete fitness and nutrition coaching with 3x/week in-person personal training, posture correction, nutrition planning, and mandatory app check-ins.", "price": "From INR 9,500/month", "sessions": "3 sessions/week", "points": ["1:1 coach + PT", "Nutrition plan", "Video check-ins", "Structural assessment", "App check-in"]},
+    {"name": "Fitness Gurukul Signature", "tag": "Intensive Coaching", "category": "signature", "summary": "Intensive transformation plan to build strength, correct movement, and transform physique with 5x/week in-person training.", "price": "INR 15,999/month", "sessions": "5 sessions/week", "points": ["1:1 coach", "In-person PT", "Nutrition plan", "Structural assessment", "App check-in"]},
+    {"name": "Fitness Gurukul Endurance", "tag": "Running Coaching", "category": "endurance", "summary": "Professional running coaching for beginners through advanced PR-seekers with periodized training, strength and conditioning, endurance nutrition, and race-day strategy.", "price": "INR 1,199/month", "sessions": "Virtual", "points": ["Dedicated running coach", "Periodized running program", "Runner-specific S&C", "Endurance nutrition", "Race strategy", "Daily chat support"]},
+    {"name": "Fitness Gurukul Forge", "tag": "Hyrox / OCR Prep", "category": "forge", "summary": "Functional fitness racing prep for Hyrox and OCR athletes with compounded S&C, engine building, grip strength, explosive power, and compromised running stamina.", "price": "INR 999/month", "sessions": "Virtual", "points": ["Dedicated S&C coach", "Compounded S&C workouts", "Functional engine building", "Agility and grip strength", "Explosive power drills"]},
+    {"name": "Virtual 1:1 Elite Transformation", "tag": "Weight Loss & Muscle Gain", "category": "elite", "summary": "Remote 1:1 fitness and nutrition coaching for weight loss, lean muscle gain, or lifestyle overhaul with hyper-personalized plans.", "price": "From INR 1,999/month", "sessions": "Virtual", "points": ["Dedicated coach", "Custom workout plans", "Indian nutrition plan", "Video check-ins", "Daily chat support", "Progressive overload"]},
 ]
 
 COACHES = [
@@ -79,15 +104,16 @@ UPDATES = [
 SERVICE_AREAS = ["Manikonda", "Lakshmi Nagar Colony", "Puppalaguda", "Shaikpet", "Gachibowli", "Kokapet", "Narsingi", "Financial District", "HITEC City", "Madhapur", "Jubilee Hills"]
 
 CHAT_SUGGESTIONS = [
-    "What programs do you offer?",
-    "How much does personal training cost?",
-    "Do you offer doorstep coaching?",
+    "Which plan is best for weight loss?",
+    "Compare Core, Prime and Signature",
+    "Do you have running or Hyrox plans?",
     "Which coach is best for yoga?",
 ]
 
 def content_payload():
     return {
         "services": SERVICES,
+        "plans": PLANS,
         "coaches": COACHES,
         "testimonials": TESTIMONIALS,
         "updates": UPDATES,
@@ -114,6 +140,10 @@ def init_db():
     DB_SCHEMA_READY = True
 
 def build_chat_system_prompt():
+    plan_lines = []
+    for plan in PLANS:
+        points = ", ".join(plan.get("points", [])[:5])
+        plan_lines.append(f"- {plan['name']} ({plan['price']}, {plan['sessions']}): {plan['summary']} Highlights: {points}.")
     service_lines = []
     for service in SERVICES:
         points = ", ".join(service.get("points", [])[:4])
@@ -124,11 +154,13 @@ def build_chat_system_prompt():
         coach_lines.append(f"- {coach['name']}, {coach['role']}. Focus: {focus}.")
     return (
         "You are the Fitness Gurukul AI assistant for a premium fitness studio in Hyderabad, India. "
-        "Answer clearly, warmly, and concisely in 2-5 short sentences unless the user asks for detail. "
-        "Recommend relevant services, coaches, or next steps. Never invent prices, coaches, or contact details. "
-        "If unsure, invite the user to book a free consultation.\n\n"
+        "Behave like a helpful fitness consultant, not a scripted FAQ bot. Ask one useful follow-up question when the user's goal is vague. "
+        "Recommend relevant plans, coaches, or next steps from the website context. Never invent prices, coaches, dates, medical claims, or contact details. "
+        "For medical, injury, pregnancy, or disease-related questions, give general fitness guidance only and recommend speaking with a qualified professional. "
+        "Answer clearly in 2-5 short sentences unless the user asks for detail. If unsure, invite the user to book a free consultation.\n\n"
         f"Contact phone: {CONTACT['phone']}. WhatsApp: {CONTACT['whatsapp']}. Email: {CONTACT['email']}. "
         f"Address: {CONTACT['address']}. Service areas: {', '.join(SERVICE_AREAS[:8])}.\n\n"
+        "Current coaching plans from the website:\n" + "\n".join(plan_lines) + "\n\n"
         "Services:\n" + "\n".join(service_lines) + "\n\n"
         "Sample coaches:\n" + "\n".join(coach_lines)
     )
@@ -193,6 +225,63 @@ def find_matching_services(text):
             return [service for service in SERVICES if service["name"] in names][:3]
     return SERVICES[:3]
 
+def plan_score(plan, text):
+    haystack = " ".join([
+        plan.get("name", ""),
+        plan.get("tag", ""),
+        plan.get("category", ""),
+        plan.get("summary", ""),
+        plan.get("price", ""),
+        plan.get("sessions", ""),
+        " ".join(plan.get("points", [])),
+    ]).lower()
+    tokens = [token for token in re.split(r"[^a-z0-9]+", text.lower()) if len(token) > 2]
+    score = sum(1 for token in tokens if token in haystack)
+    if chat_contains_any(text, ["weight", "fat", "loss", "slim", "transform", "muscle", "body", "lifestyle"]) and plan.get("category") in {"elite", "core", "prime", "signature"}:
+        score += 3
+    if chat_contains_any(text, ["home", "doorstep", "personal", "offline", "trainer", "pt", "in person", "session"]) and plan.get("category") in {"core", "prime", "signature"}:
+        score += 3
+    if chat_contains_any(text, ["run", "running", "marathon", "race", "endurance", "5k", "10k"]) and plan.get("category") == "endurance":
+        score += 6
+    if chat_contains_any(text, ["hyrox", "ocr", "obstacle", "functional", "forge"]) and plan.get("category") == "forge":
+        score += 6
+    if chat_contains_any(text, ["budget", "cheap", "low", "affordable", "online", "virtual"]) and plan.get("category") in {"elite", "forge", "endurance"}:
+        score += 3
+    if chat_contains_any(text, ["daily", "intense", "fast", "maximum", "premium", "five", "5"]) and plan.get("category") == "signature":
+        score += 5
+    if chat_contains_any(text, ["three", "3", "advanced", "complete"]) and plan.get("category") == "prime":
+        score += 4
+    if chat_contains_any(text, ["one", "1", "weekly", "starter", "beginner", "basic", "core"]) and plan.get("category") == "core":
+        score += 4
+    return score
+
+def find_matching_plans(text):
+    ranked = sorted(
+        ((plan_score(plan, text), plan) for plan in PLANS),
+        key=lambda item: item[0],
+        reverse=True,
+    )
+    matches = [plan for score, plan in ranked if score > 0]
+    return (matches or PLANS)[:3]
+
+def format_plan_reply(plans, intro=None):
+    lines = [intro or "Here are the best-fit Fitness Gurukul plans:"]
+    for plan in plans[:3]:
+        points = ", ".join(plan.get("points", [])[:3])
+        lines.append(f"- {plan['name']} - {plan['price']}, {plan['sessions']}. {plan['summary']} Key inclusions: {points}.")
+    lines.append("For the exact fit, share your goal, schedule, location, and whether you prefer virtual or in-person coaching.")
+    return " ".join(lines)
+
+def compare_core_prime_signature_reply():
+    core = next(plan for plan in PLANS if plan["category"] == "core")
+    prime = next(plan for plan in PLANS if plan["category"] == "prime")
+    signature = next(plan for plan in PLANS if plan["category"] == "signature")
+    return (
+        f"{core['name']} is the starter personalized plan: {core['price']} with {core['sessions']}. "
+        f"{prime['name']} is more hands-on: {prime['price']} with {prime['sessions']} and fuller fitness plus nutrition support. "
+        f"{signature['name']} is the intensive option: {signature['price']} with {signature['sessions']} for faster transformation, in-person PT, nutrition, posture assessment, and app check-ins."
+    )
+
 def format_service_reply(services):
     lines = ["Here are the best-fit options I found:"]
     for service in services:
@@ -234,12 +323,16 @@ def generate_local_chat_reply(message, history=None):
             f"Email: {CONTACT['email']}. Studio address: {CONTACT['address']}."
         )
 
-    if chat_contains_any(text, ["price", "cost", "fee", "how much", "pricing", "plan", "package"]):
-        priced = [f"{service['name']} ({service['price']})" for service in SERVICES[:6]]
-        return (
-            "Pricing depends on the program. Popular options include "
-            + "; ".join(priced)
-            + ". Many services include a free demo. Book a consultation for an exact quote."
+    if chat_contains_any(text, ["compare", "difference", "core", "prime", "signature"]):
+        return compare_core_prime_signature_reply()
+
+    if chat_contains_any(text, ["price", "cost", "fee", "how much", "pricing", "plan", "package", "weight", "muscle", "hyrox", "running", "virtual", "online"]):
+        return format_plan_reply(find_matching_plans(text))
+
+    if chat_contains_any(text, ["doorstep", "home", "in person", "personal trainer"]):
+        return format_plan_reply(
+            find_matching_plans("in person personal training core prime signature"),
+            "Yes. For in-person or doorstep-style coaching, these are the closest plan fits:",
         )
 
     if chat_contains_any(text, ["coach", "trainer", "instructor", "who should", "recommend"]):
@@ -255,7 +348,10 @@ def generate_local_chat_reply(message, history=None):
             "and we will match you with the right coach or program."
         )
 
-    if chat_contains_any(text, ["service", "program", "offer", "training", "personal", "doorstep", "yoga", "swim", "weight", "diet", "kids", "corporate"]):
+    if chat_contains_any(text, ["program", "offer", "training", "personal", "fitness", "strength", "transformation"]):
+        return format_plan_reply(find_matching_plans(text))
+
+    if chat_contains_any(text, ["service", "doorstep", "yoga", "swim", "diet", "kids", "corporate"]):
         return format_service_reply(find_matching_services(text))
 
     if chat_contains_any(text, ["area", "manikonda", "gachibowli", "hyderabad", "near", "local"]):
@@ -276,12 +372,24 @@ def generate_local_chat_reply(message, history=None):
         "Try asking about personal training, yoga, weight loss, doorstep coaching, or upcoming events."
     )
 
+def extract_openai_text(body):
+    if isinstance(body.get("output_text"), str):
+        return normalize_chat_text(body.get("output_text"))
+    output = body.get("output") or []
+    parts = []
+    for item in output:
+        for content in item.get("content", []) or []:
+            text = content.get("text")
+            if isinstance(text, str):
+                parts.append(text)
+    return normalize_chat_text(" ".join(parts))
+
 def call_openai_chat(message, history=None):
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
         return None
-    model = os.environ.get("OPENAI_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
-    messages = [{"role": "system", "content": build_chat_system_prompt()}]
+    model = os.environ.get("OPENAI_MODEL", "gpt-5.6").strip() or "gpt-5.6"
+    messages = []
     for item in (history or [])[-8:]:
         role = str(item.get("role", "")).strip()
         content = normalize_chat_text(item.get("content", ""))
@@ -290,12 +398,12 @@ def call_openai_chat(message, history=None):
     messages.append({"role": "user", "content": normalize_chat_text(message)})
     payload = json.dumps({
         "model": model,
-        "messages": messages,
-        "temperature": 0.5,
-        "max_tokens": 350,
+        "instructions": build_chat_system_prompt(),
+        "input": messages,
+        "max_output_tokens": 450,
     }).encode("utf-8")
     req = urlrequest.Request(
-        "https://api.openai.com/v1/chat/completions",
+        "https://api.openai.com/v1/responses",
         data=payload,
         headers={
             "Content-Type": "application/json",
@@ -306,10 +414,7 @@ def call_openai_chat(message, history=None):
     try:
         with urlrequest.urlopen(req, timeout=25) as res:
             body = json.loads(res.read().decode("utf-8"))
-        choices = body.get("choices") or []
-        if not choices:
-            return None
-        return normalize_chat_text(((choices[0].get("message") or {}).get("content")))
+        return extract_openai_text(body) or None
     except Exception as exc:
         print("OpenAI chat error:", exc)
         return None
@@ -380,6 +485,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                 "ok": True,
                 "aiEnabled": has_openai,
                 "engine": "openai" if has_openai else "local",
+                "model": os.environ.get("OPENAI_MODEL", "gpt-5.6").strip() or "gpt-5.6",
                 "suggestions": CHAT_SUGGESTIONS,
             })
         if path == "/api/admin-data":
@@ -439,6 +545,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                 "ok": True,
                 "reply": reply,
                 "source": source,
+                "aiEnabled": source == "openai",
                 "suggestions": CHAT_SUGGESTIONS,
             })
         return self.send_json({"error": "Not found"}, 404)
@@ -446,12 +553,12 @@ class AppHandler(SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     init_db()
     host = "0.0.0.0"
-    port = 8000
+    port = int(os.environ.get("PORT", "8000"))
     try:
         local_ip = socket.gethostbyname(socket.gethostname())
     except OSError:
         local_ip = "YOUR-LAPTOP-IP"
     server = ThreadingHTTPServer((host, port), AppHandler)
-    print("Fitness Gurukul running at http://127.0.0.1:8000")
-    print(f"Share on Wi-Fi: http://{local_ip}:8000")
+    print(f"Fitness Gurukul running at http://127.0.0.1:{port}")
+    print(f"Share on Wi-Fi: http://{local_ip}:{port}")
     server.serve_forever()
