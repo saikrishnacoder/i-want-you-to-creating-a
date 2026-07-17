@@ -9030,6 +9030,29 @@ select.cal-input { cursor: pointer; }
   width: 100%;
   position: relative;
 }
+.eco-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.6);
+  color: var(--white);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+.eco-arrow:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.4);
+}
+.eco-arrow-left { left: 8px; }
+.eco-arrow-right { right: 8px; }
 .eco-scroll-track {
   display: flex;
   gap: 16px;

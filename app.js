@@ -1898,6 +1898,25 @@ function initCoachCarousel() {
   next.addEventListener("click", function() { container.scrollBy({ left: scrollAmount, behavior: "smooth" }); });
 }
 
+/* -- Ecosystem Carousel (scroll with arrows) - */
+function initEcoCarousel() {
+  var track = qs("#ecoScrollTrack");
+  var prev = qs("#ecoArrowLeft");
+  var next = qs("#ecoArrowRight");
+  if (!track || !prev || !next) return;
+  var scrollAmount = 320;
+  function pauseAnimation() {
+    track.style.animationPlayState = "paused";
+  }
+  function resumeAnimation() {
+    track.style.animationPlayState = "running";
+  }
+  prev.addEventListener("click", function() { pauseAnimation(); track.scrollBy({ left: -scrollAmount, behavior: "smooth" }); });
+  next.addEventListener("click", function() { pauseAnimation(); track.scrollBy({ left: scrollAmount, behavior: "smooth" }); });
+  track.addEventListener("mouseenter", pauseAnimation);
+  track.addEventListener("mouseleave", resumeAnimation);
+}
+
 /* -- Animated Counters --------------- */
 function animateCounters() {
   var counters = qsa(".counter-num");
@@ -2509,6 +2528,7 @@ async function boot() {
   try { injectHeroContent(d); } catch (e) { console.warn("boot:injectHeroContent", e); }
   try { initHeroCarousel(); } catch (e) { console.warn("boot:initHeroCarousel", e); }
   try { initCoachCarousel(); } catch (e) { console.warn("boot:initCoachCarousel", e); }
+  try { initEcoCarousel(); } catch (e) { console.warn("boot:initEcoCarousel", e); }
 
   try { animateCounters(); } catch (e) { console.warn("boot:animateCounters", e); }
   try { initRevealAnimations(); } catch (e) { console.warn("boot:initRevealAnimations", e); }
